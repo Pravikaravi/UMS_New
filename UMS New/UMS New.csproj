@@ -235,6 +235,9 @@
     <EmbeddedResource Include="Views\DashboardFiles\CourseActions.resx">
       <DependentUpon>CourseActions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardFiles\UserActions.resx">
+      <DependentUpon>UserActions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

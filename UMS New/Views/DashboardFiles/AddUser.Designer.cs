@@ -54,6 +54,7 @@
             this.chkAdmin.TabIndex = 61;
             this.chkAdmin.Text = "Admin";
             this.chkAdmin.UseVisualStyleBackColor = true;
+            this.chkAdmin.CheckedChanged += new System.EventHandler(this.chkAdmin_CheckedChanged);
             // 
             // chkLecturer
             // 
@@ -65,6 +66,7 @@
             this.chkLecturer.TabIndex = 60;
             this.chkLecturer.Text = "Lecturer";
             this.chkLecturer.UseVisualStyleBackColor = true;
+            this.chkLecturer.CheckedChanged += new System.EventHandler(this.chkLecturer_CheckedChanged);
             // 
             // chkStaff
             // 
@@ -76,6 +78,7 @@
             this.chkStaff.TabIndex = 59;
             this.chkStaff.Text = "Staff";
             this.chkStaff.UseVisualStyleBackColor = true;
+            this.chkStaff.CheckedChanged += new System.EventHandler(this.chkStaff_CheckedChanged);
             // 
             // btnSignup
             // 
@@ -89,6 +92,7 @@
             this.btnSignup.TabIndex = 58;
             this.btnSignup.Text = "Submit";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // txtPassword
             // 
@@ -208,6 +212,7 @@
             this.Controls.Add(this.lblUsers);
             this.Name = "AddUser";
             this.Size = new System.Drawing.Size(674, 676);
+            this.Load += new System.EventHandler(this.AddUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

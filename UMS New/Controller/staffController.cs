@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UMS_New.Model;
+using UUMS_New.Model;
 
 namespace UMS_New.Controller
 {
@@ -13,12 +14,13 @@ namespace UMS_New.Controller
 
         public void CreateStaff(Staff staff, SQLiteConnection conn)
         {
-            string insert = "INSERT INTO Staff (StaffName, Phone_Number, Email) VALUES (@Name, @Phone, @Email)";
+            string insert = "INSERT INTO Staff (StaffName, Phone_Number, Email, UserID) VALUES (@Name, @Phone, @Email, @userId)";
             using (var cmd = new SQLiteCommand(insert, conn))
             {
                 cmd.Parameters.AddWithValue("@Name", staff.StaffName);
                 cmd.Parameters.AddWithValue("@Phone", staff.Phone_Number);
                 cmd.Parameters.AddWithValue("@Email", staff.Email);
+                cmd.Parameters.AddWithValue("@userId", staff.UserID);
                 cmd.ExecuteNonQuery();
             }
         }

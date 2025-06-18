@@ -28,7 +28,7 @@ namespace UMS_New.Views.DashboardFiles
             {
                 DataTable dt = courseController.GetAllCourses(conn);
                 cmbCourses.DisplayMember = "CourseName";
-                cmbCourses.ValueMember = "Id"; // course ID
+                cmbCourses.ValueMember = "Id"; 
                 cmbCourses.DataSource = dt;
                 cmbCourses.SelectedIndex = -1;
             }
