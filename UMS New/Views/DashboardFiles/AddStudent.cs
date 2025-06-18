@@ -1,25 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SQLite;
 using System.Windows.Forms;
 using UMS_New.Controller;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using UMS_New.Data;
+using UMS_New.Model;
+using UUMS_New.Model;
 
 namespace UMS_New.Views.DashboardFiles
 {
     public partial class AddStudent : UserControl
     {
-        private courseController controller;
+        private courseController courseController;
+        private studentController studentController = new studentController();
+        private userController userController = new userController();
+
         public AddStudent()
         {
             InitializeComponent();
-            controller = new courseController();
+            courseController = new courseController();
             LoadCoursesToComboBox();
         }
 
@@ -27,17 +26,84 @@ namespace UMS_New.Views.DashboardFiles
         {
             using (var conn = DBConfig.GetConnection())
             {
-                DataTable dt = controller.GetAllCourses(conn);
-                cmbCourses.DisplayMember = "CourseName"; // Column name from the database
-                cmbCourses.ValueMember = "Id";            // Optional: useful if you want the course ID
+                DataTable dt = courseController.GetAllCourses(conn);
+                cmbCourses.DisplayMember = "CourseName";
+                cmbCourses.ValueMember = "Id"; // course ID
                 cmbCourses.DataSource = dt;
-                cmbCourses.SelectedIndex = -1; // optional - to leave empty at start
+                cmbCourses.SelectedIndex = -1;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSignup_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtName.Text) ||
+                string.IsNullOrWhiteSpace(txtUT_Number.Text) ||
+                string.IsNullOrWhiteSpace(txtPhone_Number.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text) ||
+                cmbCourses.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill all fields and select a course", "Missing Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            var user = new User
+            {
+                Username = txtUT_Number.Text,
+                Password = txtPassword.Text,
+                Role = "Student"
+            };
+
+            using (var conn = DBConfig.GetConnection())
+            {
+                using (var transaction = conn.BeginTransaction())
+                {
+                    userController.CreateUser(user, conn);
+
+                    string getUserIdQuery = "SELECT last_insert_rowid();";
+                    using (var cmd = new SQLiteCommand(getUserIdQuery, conn))
+                    {
+                        long userId = (long)cmd.ExecuteScalar();
+
+                        var student = new Student
+                        {
+                            StudentName = txtName.Text,
+                            UT_Number = txtUT_Number.Text,
+                            Phone_Number = txtPhone_Number.Text,
+                            Email = txtEmail.Text,
+                            UserID = (int)userId,
+                            CourseID = Convert.ToInt32(cmbCourses.SelectedValue)
+                        };
+
+                        studentController.CreateStudent(student, conn);
+                    }
+
+                    transaction.Commit();
+                }
+            }
+
+            MessageBox.Show("Student added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearForm();
+        }
+
+
+        private void ClearForm()
+        {
+            txtName.Clear();
+            txtUT_Number.Clear();
+            txtPhone_Number.Clear();
+            txtEmail.Clear();
+            cmbCourses.SelectedIndex = -1;
+        }
+
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+            // Optionally refresh course list here
+        }
+
+        private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Optional event if needed
         }
     }
 }

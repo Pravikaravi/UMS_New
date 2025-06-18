@@ -56,6 +56,7 @@
             this.btnSignup.TabIndex = 44;
             this.btnSignup.Text = "Submit";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // txtPassword
             // 
@@ -181,7 +182,7 @@
             this.cmbCourses.Name = "cmbCourses";
             this.cmbCourses.Size = new System.Drawing.Size(319, 21);
             this.cmbCourses.TabIndex = 46;
-            this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.cmbCourses_SelectedIndexChanged);
             // 
             // AddStudent
             // 
@@ -203,6 +204,7 @@
             this.Controls.Add(this.lblSignup);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(728, 618);
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

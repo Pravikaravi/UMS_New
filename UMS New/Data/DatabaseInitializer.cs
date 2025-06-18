@@ -48,7 +48,6 @@ namespace UMS_New.Data
                         UT_Number TEXT NOT NULL,
                         Phone_Number TEXT NOT NULL,
                         Email TEXT NOT NULL,
-                        Password TEXT NOT NULL,
                         UserID INTEGER NOT NULL,
                         CourseID INTEGER NOT NULL,
                         FOREIGN KEY(UserID) REFERENCES Users(Id),

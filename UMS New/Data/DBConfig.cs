@@ -9,7 +9,7 @@ namespace UMS_New.Data
 {
     public static class DBConfig
     {
-        private static string connectionString = "Data Source=UMS_New.db;Version=3;";
+        private static string connectionString = "Data Source=UMS_New.db;Version=3;BusyTimeout=10000";
 
         public static SQLiteConnection GetConnection()
         {
