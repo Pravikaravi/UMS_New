@@ -1,0 +1,20 @@
+Z:\C#\June18\UMS New\UMS New\bin\Debug\UMS New.exe.config
+Z:\C#\June18\UMS New\UMS New\bin\Debug\UMS New.exe
+Z:\C#\June18\UMS New\UMS New\bin\Debug\UMS New.pdb
+Z:\C#\June18\UMS New\UMS New\bin\Debug\System.Data.SQLite.dll
+Z:\C#\June18\UMS New\UMS New\bin\Debug\System.Data.SQLite.xml
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.csproj.AssemblyReference.cache
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Properties.Resources.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.csproj.GenerateResource.cache
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.csproj.CoreCompileInputs.cache
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.csproj.Up2Date
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.exe
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS New.pdb
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Form1.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.AdminDashboard.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.Login.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddCourse.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddStudent.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddSubject.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddUser.resources
+Z:\C#\June18\UMS New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.CourseActions.resources

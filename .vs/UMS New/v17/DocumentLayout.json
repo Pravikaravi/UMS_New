@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\C#\\June18\\UMS New\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\june18\\ums new\\ums new\\views\\dashboardfiles\\addstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\addstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\june18\\ums new\\ums new\\controller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\controller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\june18\\ums new\\ums new\\views\\dashboardfiles\\addstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\addstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\june18\\ums new\\ums new\\views\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "courseController.cs",
+              "DocumentMoniker": "Z:\\C#\\June18\\UMS New\\UMS New\\Controller\\courseController.cs",
+              "RelativeDocumentMoniker": "UMS New\\Controller\\courseController.cs",
+              "ToolTip": "Z:\\C#\\June18\\UMS New\\UMS New\\Controller\\courseController.cs",
+              "RelativeToolTip": "UMS New\\Controller\\courseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:00:57.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddStudent.cs",
+              "DocumentMoniker": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "ToolTip": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAkwCEAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T06:58:06.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddStudent.cs [Design]",
+              "DocumentMoniker": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\AddStudent.cs",
+              "ToolTip": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\DashboardFiles\\AddStudent.cs [Design]",
+              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\AddStudent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T06:57:36.893Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminDashboard.cs [Design]",
+              "DocumentMoniker": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "UMS New\\Views\\AdminDashboard.cs",
+              "ToolTip": "Z:\\C#\\June18\\UMS New\\UMS New\\Views\\AdminDashboard.cs [Design]",
+              "RelativeToolTip": "UMS New\\Views\\AdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T06:18:12.41Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

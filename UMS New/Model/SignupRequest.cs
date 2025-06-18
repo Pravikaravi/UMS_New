@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UMS_New.Model
+{
+    internal class SignupRequest
+    {
+        public int Id { get; set; }
+
+        public string StudentName { get; set; }
+        public string UT_Number { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public int UserID { get; set; }
+
+        public int CourseID { get; set; }
+    }
+}
