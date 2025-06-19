@@ -13,5 +13,8 @@ namespace UMS_New.Model
         public string Phone_Number { get; set; }
         public string Email { get; set; }
         public int UserID { get; set; }
+
+        public List<int> SubjectIDs { get; set; } = new List<int>();
+
     }
 }

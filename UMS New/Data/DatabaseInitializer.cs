@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UMS_New.Model;
 
 namespace UMS_New.Data
 {
@@ -122,6 +123,17 @@ namespace UMS_New.Data
                         FOREIGN KEY(UserID) REFERENCES Users(Id)
                     );";
                 cmd = new SQLiteCommand(createLecturerTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
+                string createLecturer_SubjectTableQuery = @"
+                    CREATE TABLE IF NOT EXISTS Lecturer_Subject (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        LecturerID INTEGER,
+                        SubjectID INTEGER,
+                        FOREIGN KEY(LecturerID) REFERENCES Lecturer(Id),
+                        FOREIGN KEY(SubjectID) REFERENCES Subject(Id)
+                    );";
+                cmd = new SQLiteCommand(createLecturer_SubjectTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
                 // 🆕 Check if Admin exists

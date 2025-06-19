@@ -42,8 +42,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUsers = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.subjects = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // chkAdmin
@@ -194,31 +192,10 @@
             this.lblUsers.TabIndex = 48;
             this.lblUsers.Text = "Create Account for Users";
             // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.BackColor = System.Drawing.Color.White;
-            this.lblSubject.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(106, 383);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(103, 19);
-            this.lblSubject.TabIndex = 62;
-            this.lblSubject.Text = "Select Subject :";
-            // 
-            // subjects
-            // 
-            this.subjects.FormattingEnabled = true;
-            this.subjects.Location = new System.Drawing.Point(252, 383);
-            this.subjects.Name = "subjects";
-            this.subjects.Size = new System.Drawing.Size(317, 94);
-            this.subjects.TabIndex = 63;
-            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.subjects);
-            this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.chkAdmin);
             this.Controls.Add(this.chkLecturer);
             this.Controls.Add(this.chkStaff);
@@ -257,7 +234,5 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUsers;
-        private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.CheckedListBox subjects;
     }
 }

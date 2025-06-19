@@ -57,6 +57,7 @@
     <Compile Include="Controller\courseController.cs" />
     <Compile Include="Controller\examController.cs" />
     <Compile Include="Controller\lecturerController.cs" />
+    <Compile Include="Controller\Lecturer_SubjectController.cs" />
     <Compile Include="Controller\marksController.cs" />
     <Compile Include="Controller\roomController.cs" />
     <Compile Include="Controller\signuprequestController.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Exam.cs" />
     <Compile Include="Model\Lecturer.cs" />
+    <Compile Include="Model\Lecturer_Subject.cs" />
     <Compile Include="Model\Marks.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\SignupRequest.cs" />
