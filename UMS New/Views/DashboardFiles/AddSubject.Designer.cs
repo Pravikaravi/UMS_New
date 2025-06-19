@@ -45,6 +45,7 @@
             this.cmbCourses.Name = "cmbCourses";
             this.cmbCourses.Size = new System.Drawing.Size(319, 21);
             this.cmbCourses.TabIndex = 53;
+            this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.cmbCourses_SelectedIndexChanged);
             // 
             // btnAddSubject
             // 
@@ -58,6 +59,7 @@
             this.btnAddSubject.TabIndex = 52;
             this.btnAddSubject.Text = "Submit";
             this.btnAddSubject.UseVisualStyleBackColor = false;
+            this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 
             // txtDescription
             // 
@@ -133,6 +135,7 @@
             this.Controls.Add(this.lblSignup);
             this.Name = "AddSubject";
             this.Size = new System.Drawing.Size(665, 613);
+            this.Load += new System.EventHandler(this.AddSubject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

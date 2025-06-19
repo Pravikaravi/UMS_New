@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.leftAdmin = new System.Windows.Forms.Panel();
+            this.picLogout = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.treeAdmin = new System.Windows.Forms.TreeView();
             this.rightAdmin = new System.Windows.Forms.Panel();
             this.headerAdmin = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.picLogout = new System.Windows.Forms.PictureBox();
             this.leftAdmin.SuspendLayout();
-            this.headerAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
+            this.headerAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftAdmin
@@ -51,13 +51,36 @@
             this.leftAdmin.Size = new System.Drawing.Size(246, 660);
             this.leftAdmin.TabIndex = 0;
             // 
+            // picLogout
+            // 
+            this.picLogout.Image = global::UMS_New.Properties.Resources.icons8_logout_48;
+            this.picLogout.Location = new System.Drawing.Point(128, 622);
+            this.picLogout.Name = "picLogout";
+            this.picLogout.Size = new System.Drawing.Size(20, 20);
+            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogout.TabIndex = 0;
+            this.picLogout.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(33, 616);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(128, 33);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // treeAdmin
             // 
             this.treeAdmin.BackColor = System.Drawing.Color.DimGray;
             this.treeAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeAdmin.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeAdmin.ForeColor = System.Drawing.Color.White;
-            this.treeAdmin.Location = new System.Drawing.Point(0, 68);
+            this.treeAdmin.Location = new System.Drawing.Point(0, 54);
             this.treeAdmin.Name = "treeAdmin";
             this.treeAdmin.Size = new System.Drawing.Size(240, 554);
             this.treeAdmin.TabIndex = 0;
@@ -93,29 +116,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Admin Dashboard !";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(33, 616);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(128, 33);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // picLogout
-            // 
-            this.picLogout.Image = global::UMS_New.Properties.Resources.icons8_logout_48;
-            this.picLogout.Location = new System.Drawing.Point(128, 622);
-            this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(20, 20);
-            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogout.TabIndex = 0;
-            this.picLogout.TabStop = false;
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,9 +129,9 @@
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.leftAdmin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             this.headerAdmin.ResumeLayout(false);
             this.headerAdmin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             this.ResumeLayout(false);
 
         }

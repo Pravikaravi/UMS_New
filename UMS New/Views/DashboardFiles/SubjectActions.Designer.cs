@@ -28,10 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvSubjects = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvSubjects
+            // 
+            this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubjects.Location = new System.Drawing.Point(0, 16);
+            this.dgvSubjects.Name = "dgvSubjects";
+            this.dgvSubjects.Size = new System.Drawing.Size(773, 547);
+            this.dgvSubjects.TabIndex = 0;
+            this.dgvSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellContentClick);
+            // 
+            // SubjectActions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvSubjects);
+            this.Name = "SubjectActions";
+            this.Size = new System.Drawing.Size(776, 566);
+            this.Load += new System.EventHandler(this.SubjectActions_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvSubjects;
     }
 }

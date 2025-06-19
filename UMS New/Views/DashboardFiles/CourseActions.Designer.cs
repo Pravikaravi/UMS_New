@@ -39,6 +39,7 @@
             this.dgvCourses.Name = "dgvCourses";
             this.dgvCourses.Size = new System.Drawing.Size(743, 585);
             this.dgvCourses.TabIndex = 0;
+            this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick_1);
             // 
             // CourseActions
             // 

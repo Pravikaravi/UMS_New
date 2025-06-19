@@ -161,5 +161,10 @@ namespace UMS_New.Views.DashboardFiles
             // You can call the existing CellClick logic here if needed
             DgvCourses_CellClick(sender, e);
         }
+
+        private void dgvCourses_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

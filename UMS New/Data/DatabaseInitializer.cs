@@ -99,6 +99,18 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createAdminTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                // Create Subject table
+                string createSubjectTableQuery = @"
+                    CREATE TABLE IF NOT EXISTS Subject (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        SubjectName TEXT NOT NULL,
+                        Description TEXT NOT NULL,
+                        CourseID INT NOT NULL,
+                        FOREIGN KEY(CourseID) REFERENCES Course(Id)
+                    );";
+                cmd = new SQLiteCommand(createSubjectTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
                 // Lecturer table
                 string createLecturerTableQuery = @"
                     CREATE TABLE IF NOT EXISTS Lecturer (

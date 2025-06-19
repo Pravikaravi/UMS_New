@@ -39,3 +39,26 @@ Z:\C#\June18\UMS_New\UMS New\obj\Debug\UMS New.csproj.Up2Date
 Z:\C#\June18\UMS_New\UMS New\obj\Debug\UMS New.exe
 Z:\C#\June18\UMS_New\UMS New\obj\Debug\UMS New.pdb
 Z:\C#\June18\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.UserActions.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\bin\Debug\UMS New.exe.config
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\bin\Debug\UMS New.exe
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\bin\Debug\UMS New.pdb
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\bin\Debug\System.Data.SQLite.dll
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\bin\Debug\System.Data.SQLite.xml
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.exe.config
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Form1.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Properties.Resources.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.AdminDashboard.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddCourse.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddStudent.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddSubject.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddUser.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.CourseActions.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.UserActions.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.Login.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.csproj.Up2Date
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.exe
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS New.pdb
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.SubjectActions.resources
