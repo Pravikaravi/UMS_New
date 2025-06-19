@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UMS_New.Data;
 using UMS_New.Views;
@@ -21,60 +16,82 @@ namespace UMS_New
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(formMain_Paint);
+            this.Load += new EventHandler(Form1_Load);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LoadCoursesIntoComboBox();
         }
 
-        // Custom paint method to draw the rounded rectangle
+        private void LoadCoursesIntoComboBox()
+        {
+            using (var conn = DBConfig.GetConnection())
+            {
+                string query = "SELECT Id, CourseName FROM Course";
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                comboBox1.DisplayMember = "CourseName";
+                comboBox1.ValueMember = "Id";
+                comboBox1.DataSource = dt;
+                comboBox1.SelectedIndex = -1;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Optional: Show selected course details
+            if (comboBox1.SelectedItem is DataRowView row)
+            {
+                string courseName = row["CourseName"].ToString();
+                int courseId = Convert.ToInt32(row["Id"]);
+                Console.WriteLine($"Selected Course: {courseName} (ID: {courseId})");
+            }
+        }
+
         private void formMain_Paint(object sender, PaintEventArgs e)
         {
-
-            Rectangle rect_header = new Rectangle(1, 1, 1350, 150); // position and size  x,y,width,height
-            int radius_header = 10; // corner radius
+            Rectangle rect_header = new Rectangle(1, 1, 1350, 150);
+            int radius_header = 10;
 
             DrawRectangle.DrawRoundedRectangle(
-                 e.Graphics,
-                 rect_header,
-                 radius_header,
-                 Color.Black,   // border color
-                 Color.Black    // fill color
-                                // border thickness
+                e.Graphics,
+                rect_header,
+                radius_header,
+                Color.Black,
+                Color.Black
             );
 
-            Rectangle rect = new Rectangle(150, 250, 600, 385); // position and size  x,y,width,height
-            int radius = 25; // corner radius
+            Rectangle rect = new Rectangle(150, 250, 600, 385);
+            int radius = 25;
 
-
-
-            // 🖌️ Call your reusable drawing function
             DrawRectangle.DrawRoundedRectangle(
                 e.Graphics,
                 rect,
                 radius,
-                Color.White,  // border color
-                Color.White,    // fill color
-                3f                      // border thickness
+                Color.White,
+                Color.White,
+                3f
             );
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            // 🔍 1. Check empty fields
+            // Validate input
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtUT_Number.Text) ||
                 string.IsNullOrWhiteSpace(txtPhone_Number.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtConfirmpassword.Text))
+                string.IsNullOrWhiteSpace(txtConfirmpassword.Text) ||
+                comboBox1.SelectedIndex == -1)
             {
-                MessageBox.Show("Please fill in all the fields!");
+                MessageBox.Show("Please fill in all the fields and select a course!");
                 return;
             }
 
-            // 📧 2. Email format check
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             if (!Regex.IsMatch(txtEmail.Text, emailPattern))
             {
@@ -82,7 +99,6 @@ namespace UMS_New
                 return;
             }
 
-            // 📞 3. Phone number check — only 10 digits
             string phonePattern = @"^\d{10}$";
             if (!Regex.IsMatch(txtPhone_Number.Text, phonePattern))
             {
@@ -90,7 +106,6 @@ namespace UMS_New
                 return;
             }
 
-            // 🎓 4. UT number format check
             string utPattern = @"^UT\d{6}$";
             if (!Regex.IsMatch(txtUT_Number.Text, utPattern))
             {
@@ -98,7 +113,6 @@ namespace UMS_New
                 return;
             }
 
-            // 🔐 5. Password format check
             string passwordPattern = @"^[a-zA-Z0-9]{6,12}$";
             if (!Regex.IsMatch(txtPassword.Text, passwordPattern))
             {
@@ -106,68 +120,99 @@ namespace UMS_New
                 return;
             }
 
-            // 🔁 6. Confirm password
             if (txtPassword.Text != txtConfirmpassword.Text)
             {
                 MessageBox.Show("Passwords do not match!");
                 return;
             }
 
-            // ✅ All checks passed, proceed with DB insert
+            // Proceed to store in SignupRequests
             try
             {
-                SQLiteConnection conn = DBConfig.GetConnection();
+                int selectedCourseId = Convert.ToInt32(comboBox1.SelectedValue);
 
-                string insertQuery = @"
-            INSERT INTO SignupRequests (Name, UT_Number, Phone_Number, Email, Password)
-            VALUES (@Name, @UT_Number, @Phone, @Email, @Password);";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
+                using (SQLiteConnection conn = DBConfig.GetConnection())
                 {
-                    cmd.Parameters.AddWithValue("@Name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@UT_Number", txtUT_Number.Text);
-                    cmd.Parameters.AddWithValue("@Phone", txtPhone_Number.Text);
-                    cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                    cmd.Parameters.AddWithValue("@Password", txtPassword.Text); // hash later!
+                    string insertQuery = @"
+                    INSERT INTO SignupRequests
+                    (StudentName, UT_Number, Phone_Number, Email, Password, CourseID, RequestDate)
+                    VALUES
+                    (@Name, @UT, @Phone, @Email, @Password, @CourseID, @Date);";
 
-                    cmd.ExecuteNonQuery();
+                    using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@UT", txtUT_Number.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Phone", txtPhone_Number.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim()); // Hash later
+                        cmd.Parameters.AddWithValue("@CourseID", selectedCourseId);
+                        cmd.Parameters.AddWithValue("@Date", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Signup request sent to admin for approval!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearForm();
                 }
-
-                MessageBox.Show("Signup request stored successfully!");
-
-                // 🧹 Clear fields
-                txtName.Clear();
-                txtUT_Number.Clear();
-                txtPhone_Number.Clear();
-                txtEmail.Clear();
-                txtPassword.Clear();
-                txtConfirmpassword.Clear();
             }
             catch (SQLiteException ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Database Error: " + ex.Message);
             }
+        }
+
+        private void ClearForm()
+        {
+            txtName.Clear();
+            txtUT_Number.Clear();
+            txtPhone_Number.Clear();
+            txtEmail.Clear();
+            txtPassword.Clear();
+            txtConfirmpassword.Clear();
+            comboBox1.SelectedIndex = -1;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            this.Hide(); // Hide Form1 first
 
-            if (login.ShowDialog() == DialogResult.OK)
-            {
-                if (login.IsAdmin)
-                {
-                    this.Hide(); // hide main form
-                    AdminDashboard adminForm = new AdminDashboard();
-                    adminForm.FormClosed += (s, args) => this.Show(); // show main again when admin closes
-                    adminForm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("User login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // You can open another form here for regular users
-                }
-            }
+            LoginForm loginForm = new LoginForm();
+            var result = loginForm.ShowDialog(); // This will block until login form closes
+
+            //if (result == DialogResult.OK)
+            //{
+            //    // Login was successful, close Form1 completely
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    // Login was cancelled or failed, show Form1 again
+            //    this.Show();
+            //}
         }
+
+
+        //private void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    LoginForm login = new LoginForm();
+
+        //    if (login.ShowDialog() == DialogResult.OK)
+        //    {
+        //        if (login.IsAdmin)
+        //        {
+        //            this.Hide();
+        //            AdminDashboard adminForm = new AdminDashboard();
+        //            adminForm.FormClosed += (s, args) => this.Show();
+        //            adminForm.Show();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("User login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            // You can open user dashboard here
+        //        }
+        //    }
+        //}
     }
 }

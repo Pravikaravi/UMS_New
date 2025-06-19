@@ -96,7 +96,7 @@ namespace UMS_New.Views
             }
             else if (selected == "📄 Manage requests")
             {
-                ManageRequestsActions managerequestactions = new ManageRequestsActions();
+                ManageRequestActions managerequestactions = new ManageRequestActions();
                 managerequestactions.Dock = DockStyle.Fill;
                 rightAdmin.Controls.Add(managerequestactions);
             }

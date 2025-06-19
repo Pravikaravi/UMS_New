@@ -1,6 +1,6 @@
 ﻿namespace UMS_New.Views.DashboardFiles
 {
-    partial class UserActions
+    partial class ManageRequestActions
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            this.dgvManageRequests = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManageRequests)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvUsers
+            // dgvManageRequests
             // 
-            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(3, 3);
-            this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(883, 591);
-            this.dgvUsers.TabIndex = 0;
+            this.dgvManageRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManageRequests.Location = new System.Drawing.Point(3, 3);
+            this.dgvManageRequests.Name = "dgvManageRequests";
+            this.dgvManageRequests.Size = new System.Drawing.Size(729, 571);
+            this.dgvManageRequests.TabIndex = 0;
+            this.dgvManageRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageRequests_CellContentClick);
             // 
-            // UserActions
+            // ManageRequestsActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvUsers);
-            this.Name = "UserActions";
-            this.Size = new System.Drawing.Size(942, 638);
-            this.Load += new System.EventHandler(this.UserActions_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
+            this.Controls.Add(this.dgvManageRequests);
+            this.Name = "ManageRequestsActions";
+            this.Size = new System.Drawing.Size(735, 577);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManageRequests)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.DataGridView dgvManageRequests;
     }
 }
