@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvExams = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExams)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvExams
+            // 
+            this.dgvExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExams.Location = new System.Drawing.Point(3, 3);
+            this.dgvExams.Name = "dgvExams";
+            this.dgvExams.Size = new System.Drawing.Size(692, 532);
+            this.dgvExams.TabIndex = 0;
+            this.dgvExams.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExams_CellContentClick);
+            // 
+            // ExamActions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvExams);
+            this.Name = "ExamActions";
+            this.Size = new System.Drawing.Size(698, 538);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExams)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvExams;
     }
 }

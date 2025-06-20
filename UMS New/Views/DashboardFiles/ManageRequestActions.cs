@@ -35,17 +35,17 @@ namespace UMS_New.Views.DashboardFiles
             using (var conn = DBConfig.GetConnection())
             {
                 string query = @"
-                    SELECT 
-                        sr.Id, 
-                        sr.StudentName, 
-                        sr.UT_Number, 
-                        sr.Phone_Number, 
-                        sr.Email, 
-                        sr.Password, 
-                        sr.CourseID,
-                        c.CourseName
-                    FROM SignupRequests sr
-                    JOIN Course c ON sr.CourseID = c.Id";
+            SELECT 
+                sr.Id, 
+                sr.StudentName, 
+                sr.UT_Number, 
+                sr.Phone_Number, 
+                sr.Email, 
+                sr.Password, 
+                sr.CourseID,
+                c.CourseName
+            FROM SignupRequests sr
+            JOIN Course c ON sr.CourseID = c.Id";
 
                 var dt = new DataTable();
 
@@ -57,7 +57,7 @@ namespace UMS_New.Views.DashboardFiles
 
                 dgvManageRequests.DataSource = dt;
 
-                // Hide Id and CourseID columns and Password
+                // Hide Id, CourseID, Password, and Email columns
                 if (dgvManageRequests.Columns.Contains("Id"))
                     dgvManageRequests.Columns["Id"].Visible = false;
 
@@ -70,6 +70,19 @@ namespace UMS_New.Views.DashboardFiles
                 if (dgvManageRequests.Columns.Contains("Email"))
                     dgvManageRequests.Columns["Email"].Visible = false;
 
+                // Set column widths (adjust as needed)
+                if (dgvManageRequests.Columns.Contains("StudentName"))
+                    dgvManageRequests.Columns["StudentName"].Width = 132;
+
+                if (dgvManageRequests.Columns.Contains("UT_Number"))
+                    dgvManageRequests.Columns["UT_Number"].Width = 100;
+
+                if (dgvManageRequests.Columns.Contains("Phone_Number"))
+                    dgvManageRequests.Columns["Phone_Number"].Width = 110;
+
+                if (dgvManageRequests.Columns.Contains("CourseName"))
+                    dgvManageRequests.Columns["CourseName"].Width = 130;
+
                 dgvManageRequests.ClearSelection();
                 selectedRequestId = -1;
 
@@ -80,7 +93,8 @@ namespace UMS_New.Views.DashboardFiles
                         HeaderText = "Accept",
                         Name = "Accept",
                         Text = "✔️",
-                        UseColumnTextForButtonValue = true
+                        UseColumnTextForButtonValue = true,
+                        Width = 60
                     };
                     dgvManageRequests.Columns.Add(acceptBtn);
                 }
@@ -92,7 +106,8 @@ namespace UMS_New.Views.DashboardFiles
                         HeaderText = "Reject",
                         Name = "Reject",
                         Text = "❌",
-                        UseColumnTextForButtonValue = true
+                        UseColumnTextForButtonValue = true,
+                        Width = 60
                     };
                     dgvManageRequests.Columns.Add(rejectBtn);
                 }

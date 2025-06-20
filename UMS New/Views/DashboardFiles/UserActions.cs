@@ -37,6 +37,23 @@ namespace UMS_New.Views.DashboardFiles
                 dgvUsers.ClearSelection();
                 selectedUserId = -1;
 
+                // Set column widths (adjust widths as needed)
+                if (dgvUsers.Columns.Contains("Id"))
+                    dgvUsers.Columns["Id"].Width = 40;
+
+                if (dgvUsers.Columns.Contains("Username"))
+                    dgvUsers.Columns["Username"].Width = 150;
+
+                if (dgvUsers.Columns.Contains("Password"))
+                    dgvUsers.Columns["Password"].Width = 150;
+
+                if (dgvUsers.Columns.Contains("Email"))
+                    dgvUsers.Columns["Email"].Width = 150;
+
+                if (dgvUsers.Columns.Contains("Role"))
+                    dgvUsers.Columns["Role"].Width = 100;
+
+                // Add Edit button if not already added
                 if (!dgvUsers.Columns.Contains("Edit"))
                 {
                     DataGridViewButtonColumn editBtn = new DataGridViewButtonColumn();
@@ -44,9 +61,11 @@ namespace UMS_New.Views.DashboardFiles
                     editBtn.Name = "Edit";
                     editBtn.Text = "✏️";
                     editBtn.UseColumnTextForButtonValue = true;
+                    editBtn.Width = 75;
                     dgvUsers.Columns.Add(editBtn);
                 }
 
+                // Add Delete button if not already added
                 if (!dgvUsers.Columns.Contains("Delete"))
                 {
                     DataGridViewButtonColumn deleteBtn = new DataGridViewButtonColumn();
@@ -54,10 +73,12 @@ namespace UMS_New.Views.DashboardFiles
                     deleteBtn.Name = "Delete";
                     deleteBtn.Text = "🗑️";
                     deleteBtn.UseColumnTextForButtonValue = true;
+                    deleteBtn.Width = 75;
                     dgvUsers.Columns.Add(deleteBtn);
                 }
             }
         }
+
 
         private void DgvUsers_SelectionChanged(object sender, EventArgs e)
         {
@@ -117,6 +138,11 @@ namespace UMS_New.Views.DashboardFiles
                     }
                 }
             }
+        }
+
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

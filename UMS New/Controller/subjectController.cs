@@ -26,7 +26,14 @@ namespace UMS_New.Controller
         {
             DataTable dt = new DataTable();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM Subject"; // singular name here
+            cmd.CommandText = @"
+                SELECT 
+                    s.Id, 
+                    s.SubjectName, 
+                    s.Description, 
+                    c.CourseName
+                FROM Subject s
+                JOIN Course c ON s.CourseID = c.Id";
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
             return dt;

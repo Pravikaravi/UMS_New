@@ -244,6 +244,9 @@
     <EmbeddedResource Include="Views\DashboardFiles\AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardFiles\AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\AddRoom.resx">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\CourseActions.resx">
       <DependentUpon>CourseActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardFiles\ExamActions.resx">
+      <DependentUpon>ExamActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\ManageRequestActions.resx">
       <DependentUpon>ManageRequestActions.cs</DependentUpon>

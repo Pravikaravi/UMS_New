@@ -1,7 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
+using System;
+using System.Data;
 using System.Data.SQLite;
+using System.Windows.Forms;
 using UMS_New.Controller;
 using UMS_New.Data;
 using UMS_New.Model;
@@ -33,32 +34,75 @@ namespace UMS_New.Views.DashboardFiles
         {
             using (var conn = DBConfig.GetConnection())
             {
-                var dt = controller.GetAllCourses(conn);
+                // Query to get course info and count of students in each course
+                string query = @"
+            SELECT 
+                c.Id, 
+                c.CourseName, 
+                c.Duration, 
+                c.Description,
+                COUNT(s.Id) AS No_of_Students
+            FROM Course c
+            LEFT JOIN Student s ON s.CourseID = c.Id
+            GROUP BY c.Id, c.CourseName, c.Duration, c.Description
+            ORDER BY c.CourseName";
+
+                DataTable dt = new DataTable();
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    adapter.Fill(dt);
+                }
+
                 dgvCourses.DataSource = dt;
                 dgvCourses.ClearSelection();
                 selectedCourseId = -1;
 
+                // Hide Id column if present
+                if (dgvCourses.Columns.Contains("Id"))
+                    dgvCourses.Columns["Id"].Visible = false;
+
+                // Set widths for other columns
+                if (dgvCourses.Columns.Contains("CourseName"))
+                    dgvCourses.Columns["CourseName"].Width = 150;
+
+                if (dgvCourses.Columns.Contains("Duration"))
+                    dgvCourses.Columns["Duration"].Width = 83;
+
+                if (dgvCourses.Columns.Contains("Description"))
+                    dgvCourses.Columns["Description"].Width = 150;
+
+                if (dgvCourses.Columns.Contains("NumberOfStudents"))
+                    dgvCourses.Columns["No_of_Students"].Width = 100;
+
+                // Add Edit button column if not already added
                 if (!dgvCourses.Columns.Contains("Edit"))
                 {
-                    DataGridViewButtonColumn editBtn = new DataGridViewButtonColumn();
+                    var editBtn = new DataGridViewButtonColumn();
                     editBtn.HeaderText = "Edit";
                     editBtn.Name = "Edit";
                     editBtn.Text = "✏️";
                     editBtn.UseColumnTextForButtonValue = true;
+                    editBtn.Width = 54;
                     dgvCourses.Columns.Add(editBtn);
                 }
 
+                // Add Delete button column if not already added
                 if (!dgvCourses.Columns.Contains("Delete"))
                 {
-                    DataGridViewButtonColumn deleteBtn = new DataGridViewButtonColumn();
+                    var deleteBtn = new DataGridViewButtonColumn();
                     deleteBtn.HeaderText = "Delete";
                     deleteBtn.Name = "Delete";
                     deleteBtn.Text = "🗑️";
                     deleteBtn.UseColumnTextForButtonValue = true;
+                    deleteBtn.Width = 54;
                     dgvCourses.Columns.Add(deleteBtn);
                 }
             }
         }
+
+
 
         private void DgvCourses_SelectionChanged(object sender, EventArgs e)
         {

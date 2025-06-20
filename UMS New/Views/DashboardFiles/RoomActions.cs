@@ -10,7 +10,7 @@ namespace UMS_New.Views.DashboardFiles
 {
     public partial class RoomActions : UserControl
     {
-        private RoomController controller = new RoomController();
+        private roomController controller = new roomController();
         private int selectedRoomId = -1;
 
         public RoomActions()
@@ -42,6 +42,21 @@ namespace UMS_New.Views.DashboardFiles
                 dgvRooms.ClearSelection();
                 selectedRoomId = -1;
 
+                // Hide ID if needed
+                if (dgvRooms.Columns.Contains("Id"))
+                    dgvRooms.Columns["Id"].Width = 50;
+
+                // Set column widths
+                if (dgvRooms.Columns.Contains("RoomName"))
+                    dgvRooms.Columns["RoomName"].Width = 180;
+
+                if (dgvRooms.Columns.Contains("Capacity"))
+                    dgvRooms.Columns["Capacity"].Width = 100;
+
+                if (dgvRooms.Columns.Contains("IsAvailable"))
+                    dgvRooms.Columns["IsAvailable"].Width = 100;
+
+                // Add Edit button
                 if (!dgvRooms.Columns.Contains("Edit"))
                 {
                     DataGridViewButtonColumn editBtn = new DataGridViewButtonColumn
@@ -49,11 +64,13 @@ namespace UMS_New.Views.DashboardFiles
                         HeaderText = "Edit",
                         Name = "Edit",
                         Text = "✏️",
-                        UseColumnTextForButtonValue = true
+                        UseColumnTextForButtonValue = true,
+                        Width = 80
                     };
                     dgvRooms.Columns.Add(editBtn);
                 }
 
+                // Add Delete button
                 if (!dgvRooms.Columns.Contains("Delete"))
                 {
                     DataGridViewButtonColumn deleteBtn = new DataGridViewButtonColumn
@@ -61,12 +78,14 @@ namespace UMS_New.Views.DashboardFiles
                         HeaderText = "Delete",
                         Name = "Delete",
                         Text = "🗑️",
-                        UseColumnTextForButtonValue = true
+                        UseColumnTextForButtonValue = true,
+                        Width = 80
                     };
                     dgvRooms.Columns.Add(deleteBtn);
                 }
             }
         }
+
 
         private void DgvRooms_SelectionChanged(object sender, EventArgs e)
         {

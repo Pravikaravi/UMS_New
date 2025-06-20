@@ -5,7 +5,7 @@ using UMS_New.Model;
 
 namespace UMS_New.Controller
 {
-    internal class RoomController
+    internal class roomController
     {
         public void CreateRoom(Room room, SQLiteConnection conn)
         {
@@ -43,6 +43,17 @@ namespace UMS_New.Controller
             cmd.Parameters.AddWithValue("@id", room.Id);
             cmd.ExecuteNonQuery();
         }
+
+        public DataTable GetAvailableRooms(SQLiteConnection conn)
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Room WHERE IsAvailable = 'Yes'";
+            var adapter = new SQLiteDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
 
         public void DeleteRoom(int id, SQLiteConnection conn)
         {

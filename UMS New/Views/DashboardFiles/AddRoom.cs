@@ -10,7 +10,7 @@ namespace UMS_New.Views.DashboardFiles
 {
     public partial class AddRoom : UserControl
     {
-        private RoomController roomController = new RoomController();
+        private roomController roomController = new roomController();
 
         public AddRoom()
         {
