@@ -168,7 +168,7 @@
             // 
             this.rightLecturer.Location = new System.Drawing.Point(248, 60);
             this.rightLecturer.Name = "rightLecturer";
-            this.rightLecturer.Size = new System.Drawing.Size(621, 601);
+            this.rightLecturer.Size = new System.Drawing.Size(634, 601);
             this.rightLecturer.TabIndex = 4;
             this.rightLecturer.Paint += new System.Windows.Forms.PaintEventHandler(this.rightLecturer_Paint);
             // 

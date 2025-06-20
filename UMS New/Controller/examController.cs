@@ -92,6 +92,31 @@ namespace UMS_New.Controller
             cmd.ExecuteNonQuery();
         }
 
+        public DataTable GetExamsByStudentUsername(string username, SQLiteConnection conn)
+        {
+            string sql = @"
+                SELECT DISTINCT e.*
+                FROM Exam e
+                INNER JOIN ExamResults er ON e.Id = er.ExamId
+                INNER JOIN Student s ON er.StudentId = s.Id
+                INNER JOIN Users u ON s.UserID = u.Id
+                WHERE u.UserName = @username
+    ";
+
+            using (var cmd = new SQLiteCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
         public DataRow GetExamById(int examId, SQLiteConnection conn)
         {
             var cmd = conn.CreateCommand();

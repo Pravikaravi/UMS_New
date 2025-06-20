@@ -76,3 +76,8 @@ C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFi
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.TimetableActions.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboardFiles.viewMarks.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboardFiles.viewTimetable.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myAttendance.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myExams.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myMarks.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myProfile.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myTimetable.resources

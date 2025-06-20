@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UUMS_New.Model;
+using UMS_New.Model;
 
 namespace UMS_New.Controller
 {
@@ -83,7 +83,25 @@ namespace UMS_New.Controller
             cmd.ExecuteNonQuery();
         }
 
-       
+        public DataTable GetStudentByUsername(string username, SQLiteConnection conn)
+        {
+            var dt = new DataTable();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                SELECT s.*, c.CourseName 
+                FROM Student s 
+                INNER JOIN Users u ON s.UserID = u.Id
+                INNER JOIN Course c ON s.CourseID = c.Id
+                WHERE u.UserName = @username";
+                    cmd.Parameters.AddWithValue("@username", username);
+
+            using (var adapter = new SQLiteDataAdapter(cmd))
+            {
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+
 
         public DataTable GetStudentsByCourseId(int courseId, SQLiteConnection conn)
         {

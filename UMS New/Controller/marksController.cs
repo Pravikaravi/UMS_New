@@ -92,6 +92,30 @@ namespace UMS_New.Controller
             return "E";
         }
 
+        public DataTable GetMarksByStudentId(int studentId, SQLiteConnection conn)
+        {
+            string sql = @"
+                SELECT e.ExamName, e.ExamDate, m.Marks AS Mark, m.Grade
+                FROM ExamResults m
+                INNER JOIN Exam e ON m.ExamId = e.Id
+                WHERE m.StudentId = @studentId
+                ORDER BY e.ExamDate DESC";
+
+            using (var cmd = new SQLiteCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@studentId", studentId);
+
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
+
         public DataTable GetMarksByExamId(int examId, SQLiteConnection conn)
         {
             var dt = new DataTable();

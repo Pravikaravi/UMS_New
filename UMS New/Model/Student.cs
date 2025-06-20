@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UUMS_New.Model
+namespace UMS_New.Model
 {
     public class Student
     {

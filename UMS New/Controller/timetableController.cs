@@ -89,6 +89,41 @@ namespace UMS_New.Controller
             }
         }
 
+        public DataTable GetTimetableForCourseSubjects(int courseId, SQLiteConnection conn)
+        {
+            string query = @"
+                SELECT t.TimetableID, t.DayOfWeek, t.TimeSlot, 
+                       s.SubjectName, l.LecturerName, r.RoomName
+                FROM Timetables t
+                INNER JOIN Subject s ON t.SubjectID = s.Id
+                INNER JOIN Lecturer l ON t.LecturerID = l.Id
+                INNER JOIN Room r ON t.RoomID = r.Id
+                WHERE s.CourseID = @courseId
+                ORDER BY 
+            CASE 
+                WHEN t.DayOfWeek = 'Monday' THEN 1
+                WHEN t.DayOfWeek = 'Tuesday' THEN 2
+                WHEN t.DayOfWeek = 'Wednesday' THEN 3
+                WHEN t.DayOfWeek = 'Thursday' THEN 4
+                WHEN t.DayOfWeek = 'Friday' THEN 5
+                WHEN t.DayOfWeek = 'Saturday' THEN 6
+                ELSE 7
+            END, t.TimeSlot;
+    ";
+
+            using (var cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@courseId", courseId);
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    var dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
         public bool DeleteTimetableEntry(int id, SQLiteConnection conn)
         {
             string query = "DELETE FROM Timetables WHERE TimetableID = @id";

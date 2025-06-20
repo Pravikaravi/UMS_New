@@ -231,6 +231,36 @@
     <Compile Include="Views\StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myAttendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myAttendance.Designer.cs">
+      <DependentUpon>myAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myExams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myExams.Designer.cs">
+      <DependentUpon>myExams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myMarks.Designer.cs">
+      <DependentUpon>myMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myProfile.Designer.cs">
+      <DependentUpon>myProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myTimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashboardFiles\myTimetable.Designer.cs">
+      <DependentUpon>myTimetable.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +343,21 @@
     <EmbeddedResource Include="Views\StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\myAttendance.resx">
+      <DependentUpon>myAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\myExams.resx">
+      <DependentUpon>myExams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\myMarks.resx">
+      <DependentUpon>myMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\myProfile.resx">
+      <DependentUpon>myProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\myTimetable.resx">
+      <DependentUpon>myTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -345,7 +390,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\StaffDashboardFiles\" />
-    <Folder Include="Views\StudentDashboardFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000123253.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
