@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UMS_New.Data;
+using UMS_New.Session;
 using UMS_New.Views.DashboardFiles;
 
 namespace UMS_New.Views
@@ -182,7 +183,19 @@ namespace UMS_New.Views
         }
 
         // Other existing empty event handlers you had:
-        private void btnLogout_Click(object sender, EventArgs e) { }
+        private void btnLogout_Click(object sender, EventArgs e) 
+        {
+            // Optional: Clear session info if you use a session manager
+            UserSession.Username = null;
+            UserSession.Role = null;
+
+            // Show the login form
+            LoginForm login = new LoginForm();
+            login.Show();
+
+            // Close or hide the current dashboard (assuming this is inside the dashboard form)
+            this.Close();
+        }
 
         private void panel2_Paint(object sender, PaintEventArgs e) { }
 

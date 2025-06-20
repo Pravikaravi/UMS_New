@@ -36,7 +36,7 @@
             this.btnProfile = new System.Windows.Forms.Button();
             this.rightAdmin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picLogout = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.leftStudent.Controls.Add(this.btnProfile);
             this.leftStudent.Controls.Add(this.rightAdmin);
             this.leftStudent.Controls.Add(this.label2);
-            this.leftStudent.Controls.Add(this.lblWelcome);
+            this.leftStudent.Controls.Add(this.lbl1);
             this.leftStudent.Controls.Add(this.pictureBox1);
             this.leftStudent.Controls.Add(this.picLogout);
             this.leftStudent.Controls.Add(this.btnLogout);
@@ -133,16 +133,17 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
-            // lblWelcome
+            // lbl1
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(79, 22);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(91, 22);
-            this.lblWelcome.TabIndex = 2;
-            this.lblWelcome.Text = "Welcome!";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(79, 22);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(91, 22);
+            this.lbl1.TabIndex = 2;
+            this.lbl1.Text = "Welcome!";
+            this.lbl1.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // pictureBox1
             // 
@@ -175,6 +176,7 @@
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // headerStudent
             // 
@@ -223,7 +225,7 @@
         private System.Windows.Forms.Panel leftStudent;
         private System.Windows.Forms.Panel rightAdmin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picLogout;
         private System.Windows.Forms.Button btnLogout;

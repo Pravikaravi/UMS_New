@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UMS_New.Session;
 using UMS_New.Views.LecturerDashboardFiles;
 
 namespace UMS_New.Views
@@ -30,7 +31,7 @@ namespace UMS_New.Views
 
         private void LecturerDashboard_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = UMS_New.Session.UserSession.Username;
+            lblWelcome.Text = UserSession.Username ?? "";
         }
 
         private void btnTimetable_Click(object sender, EventArgs e)
@@ -50,6 +51,25 @@ namespace UMS_New.Views
         }
 
         private void rightLecturer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Optional: Clear session info if you use a session manager
+            UserSession.Username = null;
+            UserSession.Role = null;
+
+            // Show the login form
+            LoginForm login = new LoginForm();
+            login.Show();
+
+            // Close or hide the current dashboard (assuming this is inside the dashboard form)
+            this.Close();
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
         {
 
         }

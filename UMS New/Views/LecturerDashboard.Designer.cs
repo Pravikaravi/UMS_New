@@ -111,6 +111,7 @@
             this.lblWelcome.Size = new System.Drawing.Size(91, 22);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome!";
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // pictureBox1
             // 
@@ -143,6 +144,7 @@
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // headerAdmin
             // 

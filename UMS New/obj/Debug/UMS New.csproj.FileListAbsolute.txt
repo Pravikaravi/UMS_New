@@ -81,3 +81,4 @@ C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDash
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myMarks.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myProfile.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myTimetable.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StaffDashboardFiles.viewtimetable.resources
