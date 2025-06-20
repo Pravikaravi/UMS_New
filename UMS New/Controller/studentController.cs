@@ -62,5 +62,26 @@ namespace UMS_New.Controller
             cmd.Parameters.AddWithValue("@id", id);
             cmd.ExecuteNonQuery();
         }
+
+       
+
+        public DataTable GetStudentsByCourseId(int courseId, SQLiteConnection conn)
+        {
+            var dt = new DataTable();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                SELECT Id, StudentName, UT_Number -- Make sure UT_Number is here
+                FROM Student
+                WHERE CourseID = @courseId";
+            cmd.Parameters.AddWithValue("@courseId", courseId);
+
+            using (var adapter = new SQLiteDataAdapter(cmd))
+            {
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+
+
     }
 }

@@ -71,3 +71,4 @@ C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFi
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.RoomActions.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddExam.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.ExamActions.resources
+C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddMarks.resources

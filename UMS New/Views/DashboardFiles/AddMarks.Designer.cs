@@ -28,10 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblSelectExam = new System.Windows.Forms.Label();
+            this.lblMarks = new System.Windows.Forms.Label();
+            this.cmbExams = new System.Windows.Forms.ComboBox();
+            this.dgvMarks = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(390, 471);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(175, 39);
+            this.btnSave.TabIndex = 58;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
+            // lblSelectExam
+            // 
+            this.lblSelectExam.AutoSize = true;
+            this.lblSelectExam.BackColor = System.Drawing.Color.White;
+            this.lblSelectExam.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectExam.Location = new System.Drawing.Point(102, 158);
+            this.lblSelectExam.Name = "lblSelectExam";
+            this.lblSelectExam.Size = new System.Drawing.Size(90, 19);
+            this.lblSelectExam.TabIndex = 48;
+            this.lblSelectExam.Text = "Select Exam :";
+            // 
+            // lblMarks
+            // 
+            this.lblMarks.AutoSize = true;
+            this.lblMarks.BackColor = System.Drawing.Color.White;
+            this.lblMarks.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarks.Location = new System.Drawing.Point(253, 102);
+            this.lblMarks.Name = "lblMarks";
+            this.lblMarks.Size = new System.Drawing.Size(117, 26);
+            this.lblMarks.TabIndex = 47;
+            this.lblMarks.Text = "Add Marks";
+            // 
+            // cmbExams
+            // 
+            this.cmbExams.FormattingEnabled = true;
+            this.cmbExams.Location = new System.Drawing.Point(246, 158);
+            this.cmbExams.Name = "cmbExams";
+            this.cmbExams.Size = new System.Drawing.Size(319, 21);
+            this.cmbExams.TabIndex = 61;
+            // 
+            // dgvMarks
+            // 
+            this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarks.Location = new System.Drawing.Point(106, 207);
+            this.dgvMarks.Name = "dgvMarks";
+            this.dgvMarks.Size = new System.Drawing.Size(459, 235);
+            this.dgvMarks.TabIndex = 62;
+            this.dgvMarks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarks_CellContentClick);
+            // 
+            // AddMarks
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvMarks);
+            this.Controls.Add(this.cmbExams);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lblSelectExam);
+            this.Controls.Add(this.lblMarks);
+            this.Name = "AddMarks";
+            this.Size = new System.Drawing.Size(667, 562);
+            this.Load += new System.EventHandler(this.AddMarks_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblSelectExam;
+        private System.Windows.Forms.Label lblMarks;
+        private System.Windows.Forms.ComboBox cmbExams;
+        private System.Windows.Forms.DataGridView dgvMarks;
     }
 }

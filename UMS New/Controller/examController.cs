@@ -68,5 +68,19 @@ namespace UMS_New.Controller
             cmd.Parameters.AddWithValue("@subjectId", exam.SubjectId);
             cmd.ExecuteNonQuery();
         }
+
+        public DataRow GetExamById(int examId, SQLiteConnection conn)
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Exam WHERE Id = @id";
+            cmd.Parameters.AddWithValue("@id", examId);
+
+            var dt = new DataTable();
+            using (var adapter = new SQLiteDataAdapter(cmd))
+            {
+                adapter.Fill(dt);
+            }
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
     }
 }

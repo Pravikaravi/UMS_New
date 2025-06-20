@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\views\\dashboardfiles\\roomactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\roomactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\controller\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\controller\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\views\\dashboardfiles\\roomactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\roomactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\ums new\\views\\dashboardfiles\\addmarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\addmarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\views\\dashboardfiles\\subjectactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\subjectactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\ums new\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|c:\\users\\admin\\desktop\\final\\ums_new\\ums new\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\ums new\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\ums new\\views\\dashboardfiles\\addmarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\dashboardfiles\\addmarks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +35,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoomActions.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "ViewState": "AgIAACAAAACgmZmZmZkvwDIAAAA7AAAAAAAAAA==",
+              "Title": "marksController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\marksController.cs",
+              "RelativeDocumentMoniker": "UMS New\\Controller\\marksController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\marksController.cs",
+              "RelativeToolTip": "UMS New\\Controller\\marksController.cs",
+              "ViewState": "AgIAABoAAAAAZGZmZmYOwCMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:14:29.282Z",
+              "WhenOpened": "2025-06-20T07:31:51.068Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoomActions.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\RoomActions.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\RoomActions.cs [Design]",
-              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\RoomActions.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:14:27.829Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "subjectController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\subjectController.cs",
-              "RelativeDocumentMoniker": "UMS New\\Controller\\subjectController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\subjectController.cs",
-              "RelativeToolTip": "UMS New\\Controller\\subjectController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAiwCcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:10:16.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "DatabaseInitializer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Data\\DatabaseInitializer.cs",
               "RelativeDocumentMoniker": "UMS New\\Data\\DatabaseInitializer.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Data\\DatabaseInitializer.cs",
               "RelativeToolTip": "UMS New\\Data\\DatabaseInitializer.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAqwLsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAABgZmZmZmYswLAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:57:53.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T07:10:42.294Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SubjectActions.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\SubjectActions.cs",
-              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\SubjectActions.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\SubjectActions.cs",
-              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\SubjectActions.cs",
-              "ViewState": "AgIAADEAAAAAmpmZmZkjwD4AAAA4AAAAAAAAAA==",
+              "Title": "studentController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\studentController.cs",
+              "RelativeDocumentMoniker": "UMS New\\Controller\\studentController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Controller\\studentController.cs",
+              "RelativeToolTip": "UMS New\\Controller\\studentController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAA2wFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:53:45.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T06:56:46.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddMarks.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAmwI4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:53:04.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddMarks.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "RelativeDocumentMoniker": "UMS New\\Views\\DashboardFiles\\AddMarks.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final\\UMS_New\\UMS New\\Views\\DashboardFiles\\AddMarks.cs [Design]",
+              "RelativeToolTip": "UMS New\\Views\\DashboardFiles\\AddMarks.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:45:46.203Z"
             }
           ]
         }

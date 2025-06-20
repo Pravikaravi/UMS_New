@@ -163,6 +163,22 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createExamTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create ExamResults table
+                string createExamResultsTableQuery = @"
+                CREATE TABLE IF NOT EXISTS ExamResults (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    StudentId INTEGER NOT NULL,
+                    ExamId INTEGER NOT NULL,
+                    Marks TEXT,            -- <-- Text to store numbers or ""AB""
+                    Grade TEXT,
+                    FOREIGN KEY(StudentId) REFERENCES Student(Id),
+                    FOREIGN KEY(ExamId) REFERENCES Exam(Id)
+                );
+                ";
+
+                cmd = new SQLiteCommand(createExamResultsTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";
