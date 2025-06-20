@@ -51,8 +51,7 @@ namespace UMS_New.Views
 
             // Marks Management
             TreeNode marksNode = treeAdmin.Nodes.Add("Marks Management");
-            marksNode.Nodes.Add("➕ Add Marks");
-            marksNode.Nodes.Add("📄 View/Edit Marks");
+            marksNode.Nodes.Add("📄 Manage Student Marks");
 
             // Timetable Management
             TreeNode timetableNode = treeAdmin.Nodes.Add("Timetable Management");
@@ -151,17 +150,11 @@ namespace UMS_New.Views
                 examactions.Dock = DockStyle.Fill;
                 rightAdmin.Controls.Add(examactions);
             }
-            else if (selected == "➕ Add Marks")
+            else if (selected == "📄 Manage Student Marks")
             {
                 AddMarks addmarks = new AddMarks();
                 addmarks.Dock = DockStyle.Fill;
                 rightAdmin.Controls.Add(addmarks);
-            }
-            else if (selected == "📄 View/Edit Marks")
-            {
-                MarksActions marksactions = new MarksActions();
-                marksactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(marksactions);
             }
             else if (selected == "➕ Add Timetable Entry")
             {

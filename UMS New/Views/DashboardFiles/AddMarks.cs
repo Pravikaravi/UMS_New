@@ -151,8 +151,10 @@ namespace UMS_New.Views.DashboardFiles
                 if (mark >= 40) return "D";
                 return "E";
             }
+
             return "";
         }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -168,8 +170,6 @@ namespace UMS_New.Views.DashboardFiles
             {
                 foreach (DataGridViewRow row in dgvMarks.Rows)
                 {
-                    if (row.IsNewRow) continue;
-
                     int studentId = Convert.ToInt32(row.Cells["StudentId"].Value);
                     string markText = row.Cells["Mark"].Value?.ToString().Trim();
 
@@ -178,21 +178,18 @@ namespace UMS_New.Views.DashboardFiles
                         marksController.SaveOrUpdateMark(examId, studentId, "AB", "AB", conn);
                         row.Cells["Grade"].Value = "AB";
                     }
-                    else if (int.TryParse(markText, out int mark))
+                    else if (int.TryParse(markText, out int mark) && mark >= 0)
                     {
                         string grade = GetGrade(mark.ToString());
-                        marksController.SaveOrUpdateMark(examId, studentId, mark, conn); // uses int overload
+                        marksController.SaveOrUpdateMark(examId, studentId, mark.ToString(), grade, conn);
                         row.Cells["Grade"].Value = grade;
-                    }
-                    else if (string.IsNullOrWhiteSpace(markText))
-                    {
-                        marksController.DeleteMark(examId, studentId, conn);
-                        row.Cells["Grade"].Value = "";
                     }
                     else
                     {
-                        MessageBox.Show($"Invalid mark for student {row.Cells["StudentName"].Value}");
-                        return;
+                        MessageBox.Show($"Invalid mark for student {row.Cells["StudentName"].Value}. Setting to 0 and grade E.", "Invalid Mark", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        row.Cells["Mark"].Value = 0;
+                        row.Cells["Grade"].Value = "E";
+                        marksController.SaveOrUpdateMark(examId, studentId, "0", "E", conn);
                     }
                 }
             }
