@@ -259,6 +259,9 @@
     <EmbeddedResource Include="Views\DashboardFiles\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardFiles\AddTimetable.resx">
+      <DependentUpon>AddTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\SubjectActions.resx">
       <DependentUpon>SubjectActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardFiles\TimetableActions.resx">
+      <DependentUpon>TimetableActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFiles\UserActions.resx">
       <DependentUpon>UserActions.cs</DependentUpon>
@@ -318,6 +324,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1000123252.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvTimetable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimetable)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvTimetable
+            // 
+            this.dgvTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTimetable.Location = new System.Drawing.Point(3, 3);
+            this.dgvTimetable.Name = "dgvTimetable";
+            this.dgvTimetable.Size = new System.Drawing.Size(708, 558);
+            this.dgvTimetable.TabIndex = 0;
+            // 
+            // TimetableActions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvTimetable);
+            this.Name = "TimetableActions";
+            this.Size = new System.Drawing.Size(714, 564);
+            this.Load += new System.EventHandler(this.TimetableActions_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimetable)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvTimetable;
     }
 }

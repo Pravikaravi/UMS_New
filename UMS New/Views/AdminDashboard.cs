@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UMS_New.Data;
 using UMS_New.Views.DashboardFiles;
 
 namespace UMS_New.Views
@@ -16,13 +18,30 @@ namespace UMS_New.Views
         public AdminDashboard()
         {
             InitializeComponent();
-
-        }   
+            this.pictureBoxBell.Click += pictureBoxBell_Click;
+            this.Resize += AdminDashboard_Resize;
+        }
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+            StyleNotificationLabel();
+
+            int requestCount = GetPendingRequestCount();
+
+            if (requestCount > 0)
+            {
+                lblNotification.Text = requestCount.ToString();
+                lblNotification.Visible = true;
+            }
+            else
+            {
+                lblNotification.Visible = false;
+            }
+
+
 
             lblWelcome.Text = UMS_New.Session.UserSession.Username;
+
             // Student Management
             TreeNode studentNode = treeAdmin.Nodes.Add("Student Management");
             studentNode.Nodes.Add("➕ Add Student");
@@ -62,22 +81,29 @@ namespace UMS_New.Views
             TreeNode roomNode = treeAdmin.Nodes.Add("Room Management");
             roomNode.Nodes.Add("➕ Add Room (Lab or Hall)");
             roomNode.Nodes.Add("📄 View/Edit/Delete Rooms");
-
-
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private int GetPendingRequestCount()
         {
+            int count = 0;
 
+            using (var conn = DBConfig.GetConnection())
+            {
+                string query = "SELECT COUNT(*) FROM SignupRequests";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    count = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+
+            return count;
         }
-
 
         private void treeAdmin_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            // Prevent action if a main node (parent node) is selected
             if (e.Node.Parent == null)
             {
-                treeAdmin.SelectedNode = null; // Deselect main node
+                treeAdmin.SelectedNode = null;
                 return;
             }
 
@@ -182,12 +208,50 @@ namespace UMS_New.Views
             }
         }
 
+        private void pictureBoxBell_Click(object sender, EventArgs e)
+        {
+            rightAdmin.Controls.Clear();
+            ManageRequestActions managerequestactions = new ManageRequestActions();
+            managerequestactions.Dock = DockStyle.Fill;
+            rightAdmin.Controls.Add(managerequestactions);
+        }
+
+        private void AdminDashboard_Resize(object sender, EventArgs e)
+        {
+            lblNotification.Location = new Point(
+                pictureBoxBell.Right - lblNotification.Width / 2 - 25,
+                pictureBoxBell.Top - lblNotification.Height / 2 - 5
+            );
+        }
+
+        private void StyleNotificationLabel()
+        {
+            lblNotification.BackColor = Color.Red;
+            lblNotification.ForeColor = Color.White;
+            lblNotification.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            lblNotification.TextAlign = ContentAlignment.MiddleCenter;
+
+            lblNotification.Size = new Size(10, 10);
+            lblNotification.Visible = false;  // start hidden, will show only if count > 0
+
+            // Make it circular by setting Region
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.AddEllipse(0, 0, lblNotification.Width, lblNotification.Height);
+            lblNotification.Region = new Region(path);
+
+            // Position the badge at top-right corner of bell icon
+            lblNotification.Location = new Point(
+                pictureBoxBell.Right - lblNotification.Width / 2,
+                pictureBoxBell.Top - lblNotification.Height / 2
+            );
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -202,7 +266,22 @@ namespace UMS_New.Views
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNotification_Click(object sender, EventArgs e)
         {
 
         }

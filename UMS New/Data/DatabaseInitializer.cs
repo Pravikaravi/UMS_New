@@ -179,6 +179,24 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createExamResultsTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create Timetable table
+                string createTimetableTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Timetables (
+                    TimetableID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    SubjectID INTEGER NOT NULL,
+                    TimeSlot TEXT NOT NULL,
+                    RoomID INTEGER NOT NULL,
+                    LecturerID INTEGER NOT NULL,
+                    DayOfWeek TEXT NOT NULL,
+                    FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID),
+                    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+                    FOREIGN KEY (LecturerID) REFERENCES Users(UserID)
+                );
+                ";
+
+                cmd = new SQLiteCommand(createTimetableTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";

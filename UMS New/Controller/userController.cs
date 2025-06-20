@@ -44,6 +44,29 @@ namespace UMS_New.Controller
             cmd.ExecuteNonQuery();
         }
 
+        public List<User> GetLecturers(SQLiteConnection conn)
+        {
+            List<User> lecturers = new List<User>();
+            string query = "SELECT * FROM Users WHERE Role = 'Lecturer'";
+
+            using (var cmd = new SQLiteCommand(query, conn))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    lecturers.Add(new User
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Username = reader["UserName"].ToString()
+                        // Add other fields if needed
+                    });
+                }
+            }
+
+            return lecturers;
+        }
+
+
         public void DeleteUser(int id, SQLiteConnection conn)
         {
             var cmd = conn.CreateCommand();

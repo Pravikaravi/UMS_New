@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.leftAdmin = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.treeAdmin = new System.Windows.Forms.TreeView();
             this.rightAdmin = new System.Windows.Forms.Panel();
             this.headerAdmin = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBoxBell = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picLogout = new System.Windows.Forms.PictureBox();
+            this.lblNotification = new System.Windows.Forms.Label();
             this.leftAdmin.SuspendLayout();
             this.headerAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +60,28 @@
             this.leftAdmin.Name = "leftAdmin";
             this.leftAdmin.Size = new System.Drawing.Size(246, 660);
             this.leftAdmin.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(-3, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 2);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(79, 22);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(91, 22);
+            this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome!";
             // 
             // btnLogout
             // 
@@ -86,7 +111,7 @@
             // rightAdmin
             // 
             this.rightAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.rightAdmin.Location = new System.Drawing.Point(246, 65);
+            this.rightAdmin.Location = new System.Drawing.Point(247, 65);
             this.rightAdmin.Name = "rightAdmin";
             this.rightAdmin.Size = new System.Drawing.Size(637, 595);
             this.rightAdmin.TabIndex = 1;
@@ -95,6 +120,8 @@
             // headerAdmin
             // 
             this.headerAdmin.BackColor = System.Drawing.Color.Black;
+            this.headerAdmin.Controls.Add(this.pictureBoxBell);
+            this.headerAdmin.Controls.Add(this.lblNotification);
             this.headerAdmin.Controls.Add(this.label1);
             this.headerAdmin.Location = new System.Drawing.Point(246, 2);
             this.headerAdmin.Name = "headerAdmin";
@@ -107,33 +134,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(117, 18);
+            this.label1.Location = new System.Drawing.Point(92, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(393, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Admin Dashboard !";
             // 
-            // lblWelcome
+            // pictureBoxBell
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(79, 22);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(91, 22);
-            this.lblWelcome.TabIndex = 2;
-            this.lblWelcome.Text = "Welcome!";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(-3, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 2);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.pictureBoxBell.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBell.Image = global::UMS_New.Properties.Resources.notification_bell;
+            this.pictureBoxBell.Location = new System.Drawing.Point(519, 17);
+            this.pictureBoxBell.Name = "pictureBoxBell";
+            this.pictureBoxBell.Size = new System.Drawing.Size(76, 39);
+            this.pictureBoxBell.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxBell.TabIndex = 1;
+            this.pictureBoxBell.TabStop = false;
+            this.pictureBoxBell.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -156,6 +173,17 @@
             this.picLogout.TabIndex = 0;
             this.picLogout.TabStop = false;
             // 
+            // lblNotification
+            // 
+            this.lblNotification.AutoSize = true;
+            this.lblNotification.ForeColor = System.Drawing.Color.White;
+            this.lblNotification.Location = new System.Drawing.Point(576, 11);
+            this.lblNotification.Name = "lblNotification";
+            this.lblNotification.Size = new System.Drawing.Size(10, 13);
+            this.lblNotification.TabIndex = 2;
+            this.lblNotification.Text = ".";
+            this.lblNotification.Click += new System.EventHandler(this.lblNotification_Click);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +200,7 @@
             this.leftAdmin.PerformLayout();
             this.headerAdmin.ResumeLayout(false);
             this.headerAdmin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBell)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             this.ResumeLayout(false);
@@ -190,5 +219,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBoxBell;
+        private System.Windows.Forms.Label lblNotification;
     }
 }
