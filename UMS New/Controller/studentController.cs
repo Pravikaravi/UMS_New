@@ -55,6 +55,26 @@ namespace UMS_New.Controller
             cmd.ExecuteNonQuery();
         }
 
+        public DataTable GetStudentsBySubjectId(int subjectId, SQLiteConnection conn)
+        {
+            string sql = @"
+                SELECT s.* FROM Student s
+                INNER JOIN Student_Subject ss ON s.Id = ss.StudentId
+                WHERE ss.SubjectId = @subjectId";
+
+            using (var cmd = new SQLiteCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@subjectId", subjectId);
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
         public void DeleteStudent(int id, SQLiteConnection conn)
         {
             var cmd = conn.CreateCommand();

@@ -92,6 +92,7 @@ namespace UMS_New.Views.DashboardFiles
             txtName.Clear();
             txtUT_Number.Clear();
             txtPhone_Number.Clear();
+            txtPassword.Clear();
             txtEmail.Clear();
             cmbCourses.SelectedIndex = -1;
         }

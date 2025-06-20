@@ -99,106 +99,100 @@
     <Compile Include="Views\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddCourse.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddCourse.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddCourse.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddExam.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddExam.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddExam.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddExam.Designer.cs">
       <DependentUpon>AddExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddMarks.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddMarks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddMarks.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddMarks.Designer.cs">
       <DependentUpon>AddMarks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddRoom.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddRoom.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddRoom.Designer.cs">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddStudent.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddStudent.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddSubject.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddSubject.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddSubject.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddTimetable.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddTimetable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddTimetable.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddTimetable.Designer.cs">
       <DependentUpon>AddTimetable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddUser.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\AddUser.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\CourseActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\CourseActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\CourseActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\CourseActions.Designer.cs">
       <DependentUpon>CourseActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\ExamActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\ExamActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\ExamActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\ExamActions.Designer.cs">
       <DependentUpon>ExamActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\ManageRequestActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\ManageRequestActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\ManageRequestActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\ManageRequestActions.Designer.cs">
       <DependentUpon>ManageRequestActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\MarksActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\RoomActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\MarksActions.Designer.cs">
-      <DependentUpon>MarksActions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DashboardFiles\RoomActions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\DashboardFiles\RoomActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\RoomActions.Designer.cs">
       <DependentUpon>RoomActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\StudentActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\StudentActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\StudentActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\StudentActions.Designer.cs">
       <DependentUpon>StudentActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\SubjectActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\SubjectActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\SubjectActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\SubjectActions.Designer.cs">
       <DependentUpon>SubjectActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\TimetableActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\TimetableActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\TimetableActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\TimetableActions.Designer.cs">
       <DependentUpon>TimetableActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardFiles\UserActions.cs">
+    <Compile Include="Views\AdminDashboardFiles\UserActions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\DashboardFiles\UserActions.Designer.cs">
+    <Compile Include="Views\AdminDashboardFiles\UserActions.Designer.cs">
       <DependentUpon>UserActions.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LecturerDashboard.cs">
@@ -206,6 +200,18 @@
     </Compile>
     <Compile Include="Views\LecturerDashboard.Designer.cs">
       <DependentUpon>LecturerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\viewMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\viewMarks.Designer.cs">
+      <DependentUpon>viewMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\viewTimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\viewTimetable.Designer.cs">
+      <DependentUpon>viewTimetable.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
@@ -241,56 +247,62 @@
     <EmbeddedResource Include="Views\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddCourse.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddExam.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddExam.resx">
       <DependentUpon>AddExam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddMarks.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddMarks.resx">
       <DependentUpon>AddMarks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddRoom.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddRoom.resx">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddStudent.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddSubject.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddTimetable.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddTimetable.resx">
       <DependentUpon>AddTimetable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\AddUser.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\CourseActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\CourseActions.resx">
       <DependentUpon>CourseActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\ExamActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\ExamActions.resx">
       <DependentUpon>ExamActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\ManageRequestActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\ManageRequestActions.resx">
       <DependentUpon>ManageRequestActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\RoomActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\RoomActions.resx">
       <DependentUpon>RoomActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\StudentActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\StudentActions.resx">
       <DependentUpon>StudentActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\SubjectActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\SubjectActions.resx">
       <DependentUpon>SubjectActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\TimetableActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\TimetableActions.resx">
       <DependentUpon>TimetableActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardFiles\UserActions.resx">
+    <EmbeddedResource Include="Views\AdminDashboardFiles\UserActions.resx">
       <DependentUpon>UserActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LecturerDashboard.resx">
       <DependentUpon>LecturerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerDashboardFiles\viewMarks.resx">
+      <DependentUpon>viewMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerDashboardFiles\viewTimetable.resx">
+      <DependentUpon>viewTimetable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -327,6 +339,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\notification-bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\StaffDashboardFiles\" />
+    <Folder Include="Views\StudentDashboardFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

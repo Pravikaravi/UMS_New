@@ -31,20 +31,20 @@
             this.leftAdmin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLogout = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.treeAdmin = new System.Windows.Forms.TreeView();
             this.rightAdmin = new System.Windows.Forms.Panel();
             this.headerAdmin = new System.Windows.Forms.Panel();
+            this.lblNote = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxBell = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picLogout = new System.Windows.Forms.PictureBox();
-            this.lblNotification = new System.Windows.Forms.Label();
             this.leftAdmin.SuspendLayout();
-            this.headerAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
+            this.headerAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBell)).BeginInit();
             this.SuspendLayout();
             // 
             // leftAdmin
@@ -83,6 +83,27 @@
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome!";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UMS_New.Properties.Resources._1000123251;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // picLogout
+            // 
+            this.picLogout.Image = global::UMS_New.Properties.Resources.icons8_logout_48;
+            this.picLogout.Location = new System.Drawing.Point(128, 622);
+            this.picLogout.Name = "picLogout";
+            this.picLogout.Size = new System.Drawing.Size(20, 20);
+            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogout.TabIndex = 0;
+            this.picLogout.TabStop = false;
+            // 
             // btnLogout
             // 
             this.btnLogout.FlatAppearance.BorderSize = 0;
@@ -120,14 +141,23 @@
             // headerAdmin
             // 
             this.headerAdmin.BackColor = System.Drawing.Color.Black;
-            this.headerAdmin.Controls.Add(this.pictureBoxBell);
-            this.headerAdmin.Controls.Add(this.lblNotification);
+            this.headerAdmin.Controls.Add(this.lblNote);
             this.headerAdmin.Controls.Add(this.label1);
+            this.headerAdmin.Controls.Add(this.pictureBoxBell);
             this.headerAdmin.Location = new System.Drawing.Point(246, 2);
             this.headerAdmin.Name = "headerAdmin";
             this.headerAdmin.Size = new System.Drawing.Size(638, 59);
             this.headerAdmin.TabIndex = 2;
             this.headerAdmin.Paint += new System.Windows.Forms.PaintEventHandler(this.headerAdmin_Paint);
+            // 
+            // lblNote
+            // 
+            this.lblNote.AutoSize = true;
+            this.lblNote.Location = new System.Drawing.Point(320, 7);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(35, 13);
+            this.lblNote.TabIndex = 0;
+            this.lblNote.Text = "label3";
             // 
             // label1
             // 
@@ -143,46 +173,14 @@
             // pictureBoxBell
             // 
             this.pictureBoxBell.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBell.Image = global::UMS_New.Properties.Resources.notification_bell;
-            this.pictureBoxBell.Location = new System.Drawing.Point(519, 17);
+            this.pictureBoxBell.Image = global::UMS_New.Properties.Resources.bell;
+            this.pictureBoxBell.Location = new System.Drawing.Point(551, 18);
             this.pictureBoxBell.Name = "pictureBoxBell";
-            this.pictureBoxBell.Size = new System.Drawing.Size(76, 39);
+            this.pictureBoxBell.Size = new System.Drawing.Size(59, 30);
             this.pictureBoxBell.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBell.TabIndex = 1;
             this.pictureBoxBell.TabStop = false;
             this.pictureBoxBell.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UMS_New.Properties.Resources._1000123251;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // picLogout
-            // 
-            this.picLogout.Image = global::UMS_New.Properties.Resources.icons8_logout_48;
-            this.picLogout.Location = new System.Drawing.Point(128, 622);
-            this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(20, 20);
-            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogout.TabIndex = 0;
-            this.picLogout.TabStop = false;
-            // 
-            // lblNotification
-            // 
-            this.lblNotification.AutoSize = true;
-            this.lblNotification.ForeColor = System.Drawing.Color.White;
-            this.lblNotification.Location = new System.Drawing.Point(576, 11);
-            this.lblNotification.Name = "lblNotification";
-            this.lblNotification.Size = new System.Drawing.Size(10, 13);
-            this.lblNotification.TabIndex = 2;
-            this.lblNotification.Text = ".";
-            this.lblNotification.Click += new System.EventHandler(this.lblNotification_Click);
             // 
             // AdminDashboard
             // 
@@ -198,11 +196,11 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.leftAdmin.ResumeLayout(false);
             this.leftAdmin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             this.headerAdmin.ResumeLayout(false);
             this.headerAdmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBell)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +219,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxBell;
         private System.Windows.Forms.Label lblNotification;
+        private System.Windows.Forms.Label lblNote;
     }
 }

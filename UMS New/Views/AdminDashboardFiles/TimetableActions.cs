@@ -127,5 +127,10 @@ namespace UMS_New.Views.DashboardFiles
                 }
             }
         }
+
+        private void dgvTimetable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

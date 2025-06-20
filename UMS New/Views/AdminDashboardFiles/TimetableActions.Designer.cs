@@ -39,6 +39,7 @@
             this.dgvTimetable.Name = "dgvTimetable";
             this.dgvTimetable.Size = new System.Drawing.Size(708, 558);
             this.dgvTimetable.TabIndex = 0;
+            this.dgvTimetable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimetable_CellContentClick);
             // 
             // TimetableActions
             // 

@@ -23,6 +23,29 @@ namespace UMS_New.Controller
             }
             return dt;
         }
+        public DataTable GetExamsByLecturerUsername(string username, SQLiteConnection conn)
+        {
+            string sql = @"
+                SELECT Exam.* FROM Exam
+                INNER JOIN Lecturer_Subject ls ON Exam.SubjectId = ls.SubjectID
+                INNER JOIN Lecturer l ON ls.LecturerID = l.Id
+                INNER JOIN Users u ON l.UserID = u.Id
+                WHERE u.UserName = @username";
+
+            using (var cmd = new SQLiteCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
 
         public void UpdateExam(Exam exam, SQLiteConnection conn)
         {

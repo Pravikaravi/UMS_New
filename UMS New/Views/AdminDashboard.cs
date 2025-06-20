@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,68 +26,65 @@ namespace UMS_New.Views
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             StyleNotificationLabel();
-
-            int requestCount = GetPendingRequestCount();
-
-            if (requestCount > 0)
-            {
-                lblNotification.Text = requestCount.ToString();
-                lblNotification.Visible = true;
-            }
-            else
-            {
-                lblNotification.Visible = false;
-            }
-
-
+            UpdateNotificationUI();  // call here to initialize bell & label
 
             lblWelcome.Text = UMS_New.Session.UserSession.Username;
 
-            // Student Management
+            // Tree setup
             TreeNode studentNode = treeAdmin.Nodes.Add("Student Management");
             studentNode.Nodes.Add("➕ Add Student");
             studentNode.Nodes.Add("📄 View/Edit/Delete Students");
             studentNode.Nodes.Add("📄 Manage requests");
 
-            // User Management
             TreeNode userNode = treeAdmin.Nodes.Add("User Management");
             userNode.Nodes.Add("➕ Add User");
             userNode.Nodes.Add("📄 View/Edit/Delete Users");
 
-            // Course Management
             TreeNode courseNode = treeAdmin.Nodes.Add("Course Management");
             courseNode.Nodes.Add("➕ Add Course");
             courseNode.Nodes.Add("📄 View/Edit/Delete Courses");
 
-            // Subject Management
             TreeNode subjectNode = treeAdmin.Nodes.Add("Subject Management");
             subjectNode.Nodes.Add("➕ Add Subject");
             subjectNode.Nodes.Add("📄 View/Edit/Delete Subjects");
 
-            // Exam Management
             TreeNode examNode = treeAdmin.Nodes.Add("Exam Management");
             examNode.Nodes.Add("➕ Add Exam");
             examNode.Nodes.Add("📄 View Exams");
 
-            // Marks Management
             TreeNode marksNode = treeAdmin.Nodes.Add("Marks Management");
             marksNode.Nodes.Add("📄 Manage Student Marks");
 
-            // Timetable Management
             TreeNode timetableNode = treeAdmin.Nodes.Add("Timetable Management");
             timetableNode.Nodes.Add("➕ Add Timetable Entry");
             timetableNode.Nodes.Add("📄 View/Edit/Delete Timetable");
 
-            // Room Management
             TreeNode roomNode = treeAdmin.Nodes.Add("Room Management");
             roomNode.Nodes.Add("➕ Add Room (Lab or Hall)");
             roomNode.Nodes.Add("📄 View/Edit/Delete Rooms");
         }
 
+        // New method you can call anytime to refresh the notification UI
+        public void UpdateNotificationUI()
+        {
+            int requestCount = GetPendingRequestCount();
+
+            if (requestCount > 0)
+            {
+                lblNote.Text = requestCount.ToString();
+                lblNote.Visible = true;
+                pictureBoxBell.Visible = true;
+            }
+            else
+            {
+                lblNote.Visible = false;
+                pictureBoxBell.Visible = false;
+            }
+        }
+
         private int GetPendingRequestCount()
         {
             int count = 0;
-
             using (var conn = DBConfig.GetConnection())
             {
                 string query = "SELECT COUNT(*) FROM SignupRequests";
@@ -95,7 +93,6 @@ namespace UMS_New.Views
                     count = Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
-
             return count;
         }
 
@@ -111,101 +108,37 @@ namespace UMS_New.Views
             rightAdmin.Controls.Clear();
 
             if (selected == "➕ Add Student")
-            {
-                AddStudent addstudent = new AddStudent();
-                addstudent.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addstudent);
-            }
+                rightAdmin.Controls.Add(new AddStudent() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Students")
-            {
-                StudentActions studentactions = new StudentActions();
-                studentactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(studentactions);
-            }
+                rightAdmin.Controls.Add(new StudentActions() { Dock = DockStyle.Fill });
             else if (selected == "📄 Manage requests")
-            {
-                ManageRequestActions managerequestactions = new ManageRequestActions();
-                managerequestactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(managerequestactions);
-            }
+                rightAdmin.Controls.Add(new ManageRequestActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add User")
-            {
-                AddUser adduser = new AddUser();
-                adduser.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(adduser);
-            }
+                rightAdmin.Controls.Add(new AddUser() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Users")
-            {
-                UserActions useractions = new UserActions();
-                useractions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(useractions);
-            }
+                rightAdmin.Controls.Add(new UserActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Course")
-            {
-                AddCourse addcourse = new AddCourse();
-                addcourse.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addcourse);
-            }
+                rightAdmin.Controls.Add(new AddCourse() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Courses")
-            {
-                CourseActions courseactions = new CourseActions();
-                courseactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(courseactions);
-            }
+                rightAdmin.Controls.Add(new CourseActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Subject")
-            {
-                AddSubject addsubject = new AddSubject();
-                addsubject.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addsubject);
-            }
+                rightAdmin.Controls.Add(new AddSubject() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Subjects")
-            {
-                SubjectActions subjectactions = new SubjectActions();
-                subjectactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(subjectactions);
-            }
+                rightAdmin.Controls.Add(new SubjectActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Exam")
-            {
-                AddExam addexam = new AddExam();
-                addexam.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addexam);
-            }
+                rightAdmin.Controls.Add(new AddExam() { Dock = DockStyle.Fill });
             else if (selected == "📄 View Exams")
-            {
-                ExamActions examactions = new ExamActions();
-                examactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(examactions);
-            }
+                rightAdmin.Controls.Add(new ExamActions() { Dock = DockStyle.Fill });
             else if (selected == "📄 Manage Student Marks")
-            {
-                AddMarks addmarks = new AddMarks();
-                addmarks.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addmarks);
-            }
+                rightAdmin.Controls.Add(new AddMarks() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Timetable Entry")
-            {
-                AddTimetable addtimetable = new AddTimetable();
-                addtimetable.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addtimetable);
-            }
+                rightAdmin.Controls.Add(new AddTimetable() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Timetable")
-            {
-                TimetableActions timetableactions = new TimetableActions();
-                timetableactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(timetableactions);
-            }
+                rightAdmin.Controls.Add(new TimetableActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Room (Lab or Hall)")
-            {
-                AddRoom addroom = new AddRoom();
-                addroom.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(addroom);
-            }
+                rightAdmin.Controls.Add(new AddRoom() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Rooms")
-            {
-                RoomActions roomactions = new RoomActions();
-                roomactions.Dock = DockStyle.Fill;
-                rightAdmin.Controls.Add(roomactions);
-            }
+                rightAdmin.Controls.Add(new RoomActions() { Dock = DockStyle.Fill });
         }
 
         private void pictureBoxBell_Click(object sender, EventArgs e)
@@ -218,72 +151,51 @@ namespace UMS_New.Views
 
         private void AdminDashboard_Resize(object sender, EventArgs e)
         {
-            lblNotification.Location = new Point(
-                pictureBoxBell.Right - lblNotification.Width / 2 - 25,
-                pictureBoxBell.Top - lblNotification.Height / 2 - 5
+            // Reposition lblNote when window resizes
+            lblNote.Location = new Point(
+                pictureBoxBell.Right - lblNote.Width / 2,
+                pictureBoxBell.Top - lblNote.Height / 2
             );
         }
 
         private void StyleNotificationLabel()
         {
-            lblNotification.BackColor = Color.Red;
-            lblNotification.ForeColor = Color.White;
-            lblNotification.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblNotification.TextAlign = ContentAlignment.MiddleCenter;
+            lblNote.BackColor = Color.Red;
+            lblNote.ForeColor = Color.White;
+            lblNote.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            lblNote.TextAlign = ContentAlignment.MiddleCenter;
+            lblNote.Size = new Size(20, 20); // make it circle
+            lblNote.Visible = false;
 
-            lblNotification.Size = new Size(10, 10);
-            lblNotification.Visible = false;  // start hidden, will show only if count > 0
+            // Make it circular
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, lblNote.Width, lblNote.Height);
+            lblNote.Region = new Region(path);
 
-            // Make it circular by setting Region
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.AddEllipse(0, 0, lblNotification.Width, lblNotification.Height);
-            lblNotification.Region = new Region(path);
-
-            // Position the badge at top-right corner of bell icon
-            lblNotification.Location = new Point(
-                pictureBoxBell.Right - lblNotification.Width / 2,
-                pictureBoxBell.Top - lblNotification.Height / 2
+            // Position top-right of bell
+            lblNote.Location = new Point(
+                pictureBoxBell.Right - lblNote.Width / 2,
+                pictureBoxBell.Top - lblNote.Height / 2
             );
+
+            lblNote.BringToFront();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
+        // Other existing empty event handlers you had:
+        private void btnLogout_Click(object sender, EventArgs e) { }
 
-        }
+        private void panel2_Paint(object sender, PaintEventArgs e) { }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        private void headerAdmin_Paint(object sender, PaintEventArgs e) { }
 
-        }
+        private void label2_Click(object sender, EventArgs e) { }
 
-        private void headerAdmin_Paint(object sender, PaintEventArgs e)
-        {
+        private void pictureBox1_Click(object sender, EventArgs e) { }
 
-        }
+        private void pictureBox1_Click_1(object sender, EventArgs e) { }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void pictureBox2_Click(object sender, EventArgs e) { }
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNotification_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblNotification_Click(object sender, EventArgs e) { }
     }
 }
