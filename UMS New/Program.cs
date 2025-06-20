@@ -15,8 +15,8 @@ namespace UMS_New
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form1()); // Run main form first
-            //Application.Run(new AdminDashboard()); // Run main form first
+            //Application.Run(new Form1()); // Run main form first
+            Application.Run(new AdminDashboard()); // Run main form first
 
         }
     }

@@ -3,6 +3,7 @@ using System.Data.SQLite;
 using System.Windows.Forms;
 using UMS_New.Data;
 using UMS_New.Views;
+using UMS_New.Session;  // Make sure this namespace is correct for UserSession
 
 namespace UMS_New.Views
 {
@@ -19,9 +20,6 @@ namespace UMS_New.Views
         {
             // You can add any initial load logic here
         }
-
-
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -50,10 +48,18 @@ namespace UMS_New.Views
                         return;
                     }
 
+                    // Store session data here
+                    UserSession.Username = username;
+                    UserSession.Role = role;
+
                     Form dashboard = null;
 
                     if (role == "Admin")
+                    {
+                        this.Hide();
                         dashboard = new AdminDashboard();
+                    }
+                        //dashboard = new AdminDashboard();
                     else if (role == "Student")
                         dashboard = new StudentDashboard();
                     else if (role == "Staff")
@@ -73,7 +79,6 @@ namespace UMS_New.Views
                 }
             }
         }
-
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

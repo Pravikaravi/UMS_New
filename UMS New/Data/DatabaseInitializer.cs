@@ -125,6 +125,17 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createLecturerTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                // Room table
+                string createRoomTableQuery = @"
+                    CREATE TABLE IF NOT EXISTS Room (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        RoomName TEXT NOT NULL,
+                        Capacity INT NOT NULL,
+                        IsAvailable TEXT DEFAULT 'Yes'
+                    );";
+                cmd = new SQLiteCommand(createRoomTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
                 string createLecturer_SubjectTableQuery = @"
                     CREATE TABLE IF NOT EXISTS Lecturer_Subject (
                         Id INTEGER PRIMARY KEY AUTOINCREMENT,

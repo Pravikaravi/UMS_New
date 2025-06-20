@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvRooms = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvRooms
+            // 
+            this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRooms.Location = new System.Drawing.Point(3, 3);
+            this.dgvRooms.Name = "dgvRooms";
+            this.dgvRooms.Size = new System.Drawing.Size(670, 560);
+            this.dgvRooms.TabIndex = 0;
+            this.dgvRooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellContentClick);
+            // 
+            // RoomActions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvRooms);
+            this.Name = "RoomActions";
+            this.Size = new System.Drawing.Size(676, 566);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvRooms;
     }
 }

@@ -63,6 +63,26 @@ namespace UMS_New.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000123251 {
+            get {
+                object obj = ResourceManager.GetObject("1000123251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1000123252 {
+            get {
+                object obj = ResourceManager.GetObject("1000123252", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_logout_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-logout-48", resourceCulture);

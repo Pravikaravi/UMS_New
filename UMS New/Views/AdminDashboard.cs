@@ -16,10 +16,13 @@ namespace UMS_New.Views
         public AdminDashboard()
         {
             InitializeComponent();
+
         }   
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+
+            lblWelcome.Text = UMS_New.Session.UserSession.Username;
             // Student Management
             TreeNode studentNode = treeAdmin.Nodes.Add("Student Management");
             studentNode.Nodes.Add("➕ Add Student");
@@ -197,6 +200,16 @@ namespace UMS_New.Views
         }
 
         private void headerAdmin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

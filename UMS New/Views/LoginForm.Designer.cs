@@ -86,6 +86,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.White;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(211, 324);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(74, 19);
@@ -97,6 +98,7 @@
             this.lblUname.AutoSize = true;
             this.lblUname.BackColor = System.Drawing.Color.White;
             this.lblUname.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUname.ForeColor = System.Drawing.Color.Black;
             this.lblUname.Location = new System.Drawing.Point(211, 281);
             this.lblUname.Name = "lblUname";
             this.lblUname.Size = new System.Drawing.Size(78, 19);
@@ -108,13 +110,14 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.White;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Black;
             this.lblLogin.Location = new System.Drawing.Point(397, 204);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(71, 26);
             this.lblLogin.TabIndex = 33;
             this.lblLogin.Text = "Log In";
             // 
-            // Login
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +129,8 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUname);
             this.Controls.Add(this.lblLogin);
-            this.Name = "Login";
+            this.ForeColor = System.Drawing.Color.White;
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
