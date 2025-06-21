@@ -126,18 +126,44 @@ namespace UMS_New
                 return;
             }
 
-            // Proceed to store in SignupRequests
             try
             {
                 int selectedCourseId = Convert.ToInt32(comboBox1.SelectedValue);
 
                 using (SQLiteConnection conn = DBConfig.GetConnection())
                 {
+                  
+
+                    // ✅ Check if UT Number already exists in SignupRequests
+                    string checkUTQuery = @"
+                SELECT COUNT(*) FROM SignupRequests WHERE UT_Number = @UT
+                UNION ALL
+                SELECT COUNT(*) FROM Student WHERE UT_Number = @UT";
+
+                    using (SQLiteCommand checkCmd = new SQLiteCommand(checkUTQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@UT", txtUT_Number.Text.Trim());
+
+                        using (SQLiteDataReader reader = checkCmd.ExecuteReader())
+                        {
+                            int totalCount = 0;
+                            while (reader.Read())
+                                totalCount += reader.GetInt32(0);
+
+                            if (totalCount > 0)
+                            {
+                                MessageBox.Show("UT Number already exists. Please use a unique UT Number.", "Duplicate UT Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                    }
+
+                    // ✅ Insert into SignupRequests
                     string insertQuery = @"
-                    INSERT INTO SignupRequests
-                    (StudentName, UT_Number, Phone_Number, Email, Password, CourseID, RequestDate)
-                    VALUES
-                    (@Name, @UT, @Phone, @Email, @Password, @CourseID, @Date);";
+                        INSERT INTO SignupRequests
+                        (StudentName, UT_Number, Phone_Number, Email, Password, CourseID, RequestDate)
+                        VALUES
+                        (@Name, @UT, @Phone, @Email, @Password, @CourseID, @Date);";
 
                     using (SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn))
                     {
@@ -153,7 +179,6 @@ namespace UMS_New
                     }
 
                     MessageBox.Show("Signup request sent to admin for approval!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     ClearForm();
                 }
             }
@@ -162,6 +187,7 @@ namespace UMS_New
                 MessageBox.Show("Database Error: " + ex.Message);
             }
         }
+
 
         private void ClearForm()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UMS_New.Controller;
 using UMS_New.Data;
@@ -46,6 +47,34 @@ namespace UMS_New.Views.DashboardFiles
                 return;
             }
 
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(txtEmail.Text, emailPattern))
+            {
+                MessageBox.Show("Please enter a valid email address!");
+                return;
+            }
+
+            string phonePattern = @"^\d{10}$";
+            if (!Regex.IsMatch(txtPhone_Number.Text, phonePattern))
+            {
+                MessageBox.Show("Phone number must be exactly 10 digits!");
+                return;
+            }
+
+            string utPattern = @"^UT\d{6}$";
+            if (!Regex.IsMatch(txtUT_Number.Text, utPattern))
+            {
+                MessageBox.Show("UT Number must be 'UT' followed by 6 digits (e.g., UT010008)!");
+                return;
+            }
+
+            string passwordPattern = @"^[a-zA-Z0-9]{6,12}$";
+            if (!Regex.IsMatch(txtPassword.Text, passwordPattern))
+            {
+                MessageBox.Show("Password must be 6–12 characters with letters and numbers only. No symbols allowed!");
+                return;
+            }
+
             var user = new User
             {
                 Username = txtUT_Number.Text,
@@ -55,6 +84,15 @@ namespace UMS_New.Views.DashboardFiles
 
             using (var conn = DBConfig.GetConnection())
             {
+               
+
+                // ✅ Check if UT Number already exists
+                if (studentController.IsUTNumberExists(txtUT_Number.Text, conn))
+                {
+                    MessageBox.Show("UT Number already exists! Please enter a unique UT Number.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 using (var transaction = conn.BeginTransaction())
                 {
                     userController.CreateUser(user, conn);
@@ -84,6 +122,7 @@ namespace UMS_New.Views.DashboardFiles
             MessageBox.Show("Student added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ClearForm();
         }
+
 
 
         private void ClearForm()

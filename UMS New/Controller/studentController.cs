@@ -102,6 +102,17 @@ namespace UMS_New.Controller
             return dt;
         }
 
+        public bool IsUTNumberExists(string utNumber, SQLiteConnection conn)
+        {
+            string query = "SELECT COUNT(*) FROM Student WHERE UT_Number = @utNumber";
+            using (var cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@utNumber", utNumber);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+        }
+
 
         public DataTable GetStudentsByCourseId(int courseId, SQLiteConnection conn)
         {

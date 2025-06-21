@@ -225,12 +225,6 @@
     <Compile Include="Views\StaffDashboard.Designer.cs">
       <DependentUpon>StaffDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StaffDashboardFiles\viewtimetable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\StaffDashboardFiles\viewtimetable.Designer.cs">
-      <DependentUpon>viewtimetable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,9 +340,6 @@
     <EmbeddedResource Include="Views\StaffDashboard.resx">
       <DependentUpon>StaffDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\StaffDashboardFiles\viewtimetable.resx">
-      <DependentUpon>viewtimetable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,7 +388,9 @@
   <ItemGroup>
     <None Include="Resources\bell.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\StaffDashboardFiles\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1000123253.png" />
   </ItemGroup>

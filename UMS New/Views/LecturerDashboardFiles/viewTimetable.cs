@@ -60,7 +60,7 @@ namespace UMS_New.Views.LecturerDashboardFiles
                 // Set column widths
                 SetColumnWidth("DayOfWeek", 100);
                 SetColumnWidth("TimeSlot", 120);
-                SetColumnWidth("SubjectName", 100);
+                SetColumnWidth("SubjectName", 115);
                 SetColumnWidth("LecturerName", 135);
                 SetColumnWidth("RoomName", 120);
 
