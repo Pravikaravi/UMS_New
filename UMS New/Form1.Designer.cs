@@ -198,7 +198,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogin.Location = new System.Drawing.Point(440, 184);
+            this.btnLogin.Location = new System.Drawing.Point(440, 169);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(116, 28);
             this.btnLogin.TabIndex = 23;
@@ -210,7 +210,7 @@
             // 
             this.lblSignin.AutoSize = true;
             this.lblSignin.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignin.Location = new System.Drawing.Point(127, 184);
+            this.lblSignin.Location = new System.Drawing.Point(127, 169);
             this.lblSignin.Name = "lblSignin";
             this.lblSignin.Size = new System.Drawing.Size(227, 21);
             this.lblSignin.TabIndex = 22;
@@ -276,6 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);

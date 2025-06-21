@@ -53,7 +53,7 @@ namespace UMS_New
 
         private void formMain_Paint(object sender, PaintEventArgs e)
         {
-            Rectangle rect_header = new Rectangle(1, 1, 1350, 150);
+            Rectangle rect_header = new Rectangle(1, 1, 881, 120);
             int radius_header = 10;
 
             DrawRectangle.DrawRoundedRectangle(
