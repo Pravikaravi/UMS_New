@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,35 +24,10 @@
               "RelativeDocumentMoniker": "UMS New\\Program.cs",
               "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Program.cs",
               "RelativeToolTip": "UMS New\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T08:52:02.127Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs",
-              "RelativeDocumentMoniker": "UMS New\\Form1.cs",
-              "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs",
-              "RelativeToolTip": "UMS New\\Form1.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAiwIYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:50:35.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs",
-              "RelativeDocumentMoniker": "UMS New\\Form1.cs",
-              "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs [Design]",
-              "RelativeToolTip": "UMS New\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:50:32.744Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

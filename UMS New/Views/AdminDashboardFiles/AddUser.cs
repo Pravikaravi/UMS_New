@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UMS_New.Controller;
 using UMS_New.Data;
@@ -153,6 +154,27 @@ namespace UMS_New.Views.DashboardFiles
             {
                 MessageBox.Show("Please enter a password.");
                 txtPassword.Focus();
+                return;
+            }
+
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(txtEmail.Text, emailPattern))
+            {
+                MessageBox.Show("Invalid email address format!");
+                return;
+            }
+
+            string phonePattern = @"^\d{10}$";
+            if (!Regex.IsMatch(txtPhone_Number.Text, phonePattern))
+            {
+                MessageBox.Show("Phone number must be exactly 10 digits!");
+                return;
+            }
+
+            string passwordPattern = @"^[a-zA-Z0-9]{6,12}$";
+            if (!Regex.IsMatch(txtPassword.Text, passwordPattern))
+            {
+                MessageBox.Show("Password must be 6–12 characters with letters and numbers only. No symbols allowed!");
                 return;
             }
 
