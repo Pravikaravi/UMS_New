@@ -82,3 +82,45 @@ C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDash
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myProfile.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myTimetable.resources
 C:\Users\Admin\Desktop\Final\UMS_New\UMS New\obj\Debug\UMS_New.Views.StaffDashboardFiles.viewtimetable.resources
+Z:\C#\Last\UMS_New\UMS New\bin\Debug\UMS New.exe.config
+Z:\C#\Last\UMS_New\UMS New\bin\Debug\UMS New.exe
+Z:\C#\Last\UMS_New\UMS New\bin\Debug\UMS New.pdb
+Z:\C#\Last\UMS_New\UMS New\bin\Debug\System.Data.SQLite.dll
+Z:\C#\Last\UMS_New\UMS New\bin\Debug\System.Data.SQLite.xml
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.AssemblyReference.cache
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Form1.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Properties.Resources.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.AdminDashboard.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddCourse.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddExam.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddMarks.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddRoom.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddStudent.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddSubject.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddTimetable.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.AddUser.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.CourseActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.ExamActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.ManageRequestActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.RoomActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.StudentActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.SubjectActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.TimetableActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.UserActions.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboard.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboardFiles.viewMarks.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboardFiles.viewTimetable.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.LoginForm.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StaffDashboard.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StaffDashboardFiles.viewtimetable.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboard.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myAttendance.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myExams.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myMarks.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myProfile.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.myTimetable.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.GenerateResource.cache
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.CoreCompileInputs.cache
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.Up2Date
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.exe
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.pdb

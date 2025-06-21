@@ -132,27 +132,44 @@ namespace UMS_New.Views.DashboardFiles
 
         private void DgvManageRequests_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            // Skip if the clicked row is the header or invalid
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
 
-            int requestId = Convert.ToInt32(dgvManageRequests.Rows[e.RowIndex].Cells["Id"].Value);
+            // Get the value of the "Id" cell from the clicked row
+            var cellValue = dgvManageRequests.Rows[e.RowIndex].Cells["Id"].Value;
 
-            if (dgvManageRequests.Columns[e.ColumnIndex].Name == "Accept")
+            // Check if the value is null or DBNull
+            if (cellValue == null || cellValue == DBNull.Value)
             {
-                var confirm = MessageBox.Show("Accept this signup request?", "Confirm Accept", MessageBoxButtons.YesNo);
+                MessageBox.Show("Invalid request ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Safely convert to int
+            int requestId = Convert.ToInt32(cellValue);
+
+            // Get the column name that was clicked
+            string columnName = dgvManageRequests.Columns[e.ColumnIndex].Name;
+
+            if (columnName == "Accept")
+            {
+                var confirm = MessageBox.Show("Accept this signup request?", "Confirm Accept", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirm == DialogResult.Yes)
                 {
                     AcceptRequest(requestId);
                 }
             }
-            else if (dgvManageRequests.Columns[e.ColumnIndex].Name == "Reject")
+            else if (columnName == "Reject")
             {
-                var confirm = MessageBox.Show("Reject and delete this signup request?", "Confirm Reject", MessageBoxButtons.YesNo);
+                var confirm = MessageBox.Show("Reject and delete this signup request?", "Confirm Reject", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (confirm == DialogResult.Yes)
                 {
                     RejectRequest(requestId);
                 }
             }
         }
+
 
         private void AcceptRequest(int requestId)
         {
