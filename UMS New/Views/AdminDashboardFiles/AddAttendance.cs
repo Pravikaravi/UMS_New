@@ -99,26 +99,52 @@ namespace UMS_New.Views.AdminDashboardFiles
             cmbCourse.ValueMember = "Id";
         }
 
+        private void dtpAttendanceDate_ValueChanged(object sender, EventArgs e)
+        {
+            // Get the new selected date in the correct format
+            string selectedDate = dtpAttendanceDate.Value.ToString("yyyy-MM-dd");
+
+            // Debug: Check if the date change is being detected
+            Console.WriteLine($"Date changed to: {selectedDate}");
+
+            // Clear all attendance statuses for all students
+            foreach (DataGridViewRow row in dgvStudents.Rows)
+            {
+                if (row.IsNewRow) continue;
+                row.Cells["AttendanceStatus"].Value = null; // Clear the status for all students
+            }
+
+            // Now, load the attendance data for this new date
+            LoadAttendanceForDate(selectedDate);
+        }
+
+
         private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Ensure that SelectedValue is valid
+            // Ensure that the subject and course are selected properly
             if (cmbSubject.SelectedValue != null && int.TryParse(cmbSubject.SelectedValue.ToString(), out int subjectId))
             {
-                // Now use courseId, which is an integer
                 if (cmbCourse.SelectedValue != null && int.TryParse(cmbCourse.SelectedValue.ToString(), out int courseId))
                 {
-                    // Now use courseId to fetch students for the selected course
+                    // Get the selected date
+                    string selectedDate = dtpAttendanceDate.Value.ToString("yyyy-MM-dd");
+
+                    // Debug: Checking the selected date and course
+                    Console.WriteLine($"Subject changed. CourseId: {courseId}, Selected Date: {selectedDate}");
+
+                    // Fetch students for the selected course
                     var students = GetStudentsByCourse(courseId);
 
+                    // Clear the DataGridView and setup new columns
                     dgvStudents.Columns.Clear();
 
-                    // Create a DataTable to hold selected fields
+                    // Create a new DataTable to hold selected fields
                     DataTable table = new DataTable();
                     table.Columns.Add("Id", typeof(int));
                     table.Columns.Add("StudentName", typeof(string));
                     table.Columns.Add("UT_Number", typeof(string));
 
-                    // Add data to the table
+                    // Add students data to the table
                     foreach (var student in students)
                     {
                         table.Rows.Add(student.Id, student.StudentName, student.UT_Number);
@@ -126,38 +152,15 @@ namespace UMS_New.Views.AdminDashboardFiles
 
                     dgvStudents.DataSource = table;
 
-                    // Add AttendanceStatus combo box column
+                    // Add the AttendanceStatus combo box column for each student
                     DataGridViewComboBoxColumn statusCol = new DataGridViewComboBoxColumn();
                     statusCol.Name = "AttendanceStatus";
                     statusCol.HeaderText = "Status";
                     statusCol.Items.AddRange("Present", "Absent", "Leave");
                     dgvStudents.Columns.Add(statusCol);
 
-                    // Load previous attendance status for each student
-                    string date = dtpAttendanceDate.Value.ToString("yyyy-MM-dd");
-
-                    // Get the attendance for the selected subject and date
-                    List<Attendance> attendanceList = new attendanceController().GetAttendanceBySubjectDate(subjectId, date, DBConfig.GetConnection());
-
-                    // Loop through the grid rows and set the status for each student
-                    foreach (DataGridViewRow row in dgvStudents.Rows)
-                    {
-                        if (row.IsNewRow) continue;
-
-                        int studentId = (int)row.Cells["Id"].Value;
-                        var attendance = attendanceList.FirstOrDefault(a => a.StudentID == studentId);
-
-                        if (attendance != null)
-                        {
-                            // Set the status based on existing attendance data
-                            row.Cells["AttendanceStatus"].Value = attendance.Status;
-                        }
-                        else
-                        {
-                            // Set default to "Absent" if no attendance exists
-                            row.Cells["AttendanceStatus"].Value = "Absent";
-                        }
-                    }
+                    // Load attendance for the selected date
+                    LoadAttendanceForDate(selectedDate);
                 }
                 else
                 {
@@ -169,6 +172,46 @@ namespace UMS_New.Views.AdminDashboardFiles
                 MessageBox.Show("Please select a valid subject.");
             }
         }
+
+        private void LoadAttendanceForDate(string date)
+        {
+            // Get the selected subject id
+            int subjectId = (int)cmbSubject.SelectedValue;
+
+            // Debug: Output current subject and date
+            Console.WriteLine($"Loading attendance for SubjectId: {subjectId}, Date: {date}");
+
+            // Fetch attendance data for the selected subject and date
+            List<Attendance> attendanceList = new attendanceController().GetAttendanceBySubjectDate(subjectId, date, DBConfig.GetConnection());
+
+            // Loop through the DataGridView rows and check if attendance exists
+            foreach (DataGridViewRow row in dgvStudents.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                int studentId = (int)row.Cells["Id"].Value;
+
+                // Look for attendance data for the current student and date
+                var attendance = attendanceList.FirstOrDefault(a => a.StudentID == studentId);
+
+                // If attendance exists for this student on the selected date, fill the status
+                if (attendance != null)
+                {
+                    row.Cells["AttendanceStatus"].Value = attendance.Status;
+                }
+                else
+                {
+                    // No attendance for this student on this date, so leave it empty
+                    row.Cells["AttendanceStatus"].Value = null;
+                }
+            }
+
+            // Debug: After loading the data
+            Console.WriteLine("Attendance loaded successfully.");
+        }
+
+
+
         // Fetch Courses from DB
         private List<Course> GetCoursesFromDB()
         {
@@ -209,19 +252,21 @@ namespace UMS_New.Views.AdminDashboardFiles
         {
 
         }
-        // 🔽 Save Attendance Button Click
+        //  Save Attendance Button Click
+        // Save Attendance Button Click
         private void btnSaveAttendance_Click(object sender, EventArgs e)
         {
             var attendanceList = new List<Attendance>();
             int subjectId = (int)cmbSubject.SelectedValue;
             string date = dtpAttendanceDate.Value.ToString("yyyy-MM-dd");
 
+            // Collect all the attendance data for each student
             foreach (DataGridViewRow row in dgvStudents.Rows)
             {
                 if (row.IsNewRow) continue;
 
                 int studentId = (int)row.Cells["Id"].Value;
-                string status = row.Cells["AttendanceStatus"].Value?.ToString() ?? "Absent"; // default to "Absent" if nothing is selected
+                string status = row.Cells["AttendanceStatus"].Value?.ToString() ?? "Absent"; // Default to "Absent" if no status
 
                 attendanceList.Add(new Attendance
                 {
@@ -232,17 +277,26 @@ namespace UMS_New.Views.AdminDashboardFiles
                 });
             }
 
+            // Save the attendance data to the database
             using (var conn = DBConfig.GetConnection())
             {
                 var controller = new attendanceController();
                 foreach (var attendance in attendanceList)
                 {
-                    controller.MarkAttendance(attendance, conn);  // Mark attendance for each student
+                    controller.MarkAttendance(attendance, conn);  // Save attendance for each student
                 }
                 conn.Close();
             }
 
+            // Clear the DataGridView after saving
+            foreach (DataGridViewRow row in dgvStudents.Rows)
+            {
+                if (row.IsNewRow) continue;
+                row.Cells["AttendanceStatus"].Value = null;  // Clear the status for all students
+            }
+
             MessageBox.Show("Attendance saved successfully!");
         }
+
     }
 }
