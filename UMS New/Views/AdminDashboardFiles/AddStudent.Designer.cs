@@ -42,6 +42,8 @@
             this.lblSignup = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCourses = new System.Windows.Forms.ComboBox();
+            this.picPassword = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSignup
@@ -184,10 +186,23 @@
             this.cmbCourses.TabIndex = 46;
             this.cmbCourses.SelectedIndexChanged += new System.EventHandler(this.cmbCourses_SelectedIndexChanged);
             // 
+            // picPassword
+            // 
+            this.picPassword.BackColor = System.Drawing.Color.White;
+            this.picPassword.Image = global::UMS_New.Properties.Resources.Eye;
+            this.picPassword.Location = new System.Drawing.Point(506, 332);
+            this.picPassword.Name = "picPassword";
+            this.picPassword.Size = new System.Drawing.Size(21, 19);
+            this.picPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPassword.TabIndex = 47;
+            this.picPassword.TabStop = false;
+            this.picPassword.Click += new System.EventHandler(this.picPassword_Click);
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picPassword);
             this.Controls.Add(this.cmbCourses);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSignup);
@@ -205,6 +220,7 @@
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(728, 618);
             this.Load += new System.EventHandler(this.AddStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +242,6 @@
         private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbCourses;
+        private System.Windows.Forms.PictureBox picPassword;
     }
 }

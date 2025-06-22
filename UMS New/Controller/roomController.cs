@@ -11,8 +11,8 @@ namespace UMS_New.Controller
         {
             var cmd = conn.CreateCommand();
             cmd.CommandText = @"
-        INSERT INTO Room (RoomName, Capacity, IsAvailable) 
-        VALUES (@roomName, @capacity, @isAvailable)";
+                INSERT INTO Room (RoomName, Capacity, IsAvailable) 
+                VALUES (@roomName, @capacity, @isAvailable)";
             cmd.Parameters.AddWithValue("@roomName", room.RoomName);
             cmd.Parameters.AddWithValue("@capacity", room.Capacity);
             cmd.Parameters.AddWithValue("@isAvailable", room.IsAvailable ? "Yes" : "No");
@@ -60,7 +60,7 @@ namespace UMS_New.Controller
             var cmd = conn.CreateCommand();
             cmd.CommandText = "DELETE FROM Room WHERE Id = @id";
             cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery(); 
         }
     }
 }

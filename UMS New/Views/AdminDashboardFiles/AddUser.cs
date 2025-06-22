@@ -44,7 +44,10 @@ namespace UMS_New.Views.DashboardFiles
 
         private void AddUser_Load(object sender, EventArgs e)
         {
-            // You can leave this empty or add initialization code here if needed
+            // Initial state: password hidden
+            txtPassword.UseSystemPasswordChar = true;
+            picPassword.Image = Properties.Resources.Eye;
+
         }
 
 
@@ -131,7 +134,7 @@ namespace UMS_New.Views.DashboardFiles
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Basic validations
+            // 1. Field Validations
             if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Please enter your name.");
@@ -157,28 +160,32 @@ namespace UMS_New.Views.DashboardFiles
                 return;
             }
 
+            // 2. Pattern Validations
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            if (!Regex.IsMatch(txtEmail.Text, emailPattern))
+            if (!Regex.IsMatch(email, emailPattern))
             {
                 MessageBox.Show("Invalid email address format!");
+                txtEmail.Focus();
                 return;
             }
 
             string phonePattern = @"^\d{10}$";
-            if (!Regex.IsMatch(txtPhone_Number.Text, phonePattern))
+            if (!Regex.IsMatch(phone, phonePattern))
             {
                 MessageBox.Show("Phone number must be exactly 10 digits!");
+                txtPhone_Number.Focus();
                 return;
             }
 
             string passwordPattern = @"^[a-zA-Z0-9]{6,12}$";
-            if (!Regex.IsMatch(txtPassword.Text, passwordPattern))
+            if (!Regex.IsMatch(password, passwordPattern))
             {
-                MessageBox.Show("Password must be 6–12 characters with letters and numbers only. No symbols allowed!");
+                MessageBox.Show("Password must be 6–12 characters long with only letters and numbers.");
+                txtPassword.Focus();
                 return;
             }
 
-            // Determine selected role
+            // 3. Role Selection
             string role = null;
             if (chkLecturer.Checked) role = "Lecturer";
             else if (chkAdmin.Checked) role = "Admin";
@@ -190,9 +197,16 @@ namespace UMS_New.Views.DashboardFiles
                 return;
             }
 
+            // 4. Lecturer must select at least one subject
+            if (role == "Lecturer" && checkedListSubjects.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select at least one subject for the Lecturer.");
+                return;
+            }
+
+            // 5. Database Actions
             using (var conn = DBConfig.GetConnection())
             {
-                // 1. Insert into Users table
                 var user = new User
                 {
                     Username = email,
@@ -201,12 +215,10 @@ namespace UMS_New.Views.DashboardFiles
                 };
                 new userController().CreateUser(user, conn);
 
-                // 2. Get new user ID
                 long userId = (long)new SQLiteCommand("SELECT last_insert_rowid();", conn).ExecuteScalar();
 
                 if (role == "Lecturer")
                 {
-                    // Collect selected subject IDs
                     List<int> selectedSubjectIds = new List<int>();
                     foreach (var item in checkedListSubjects.CheckedItems)
                     {
@@ -215,7 +227,6 @@ namespace UMS_New.Views.DashboardFiles
                             selectedSubjectIds.Add(subjectMap[subjectName]);
                     }
 
-                    // Create Lecturer object and insert
                     var lecturer = new Lecturer
                     {
                         LecturerName = name,
@@ -229,7 +240,6 @@ namespace UMS_New.Views.DashboardFiles
                 }
                 else if (role == "Admin")
                 {
-                    // Insert into Admin table
                     string insertAdmin = "INSERT INTO Admin (AdminName, Phone_Number, Email, UserID) VALUES (@name, @phone, @email, @userId)";
                     using (var cmd = new SQLiteCommand(insertAdmin, conn))
                     {
@@ -242,7 +252,6 @@ namespace UMS_New.Views.DashboardFiles
                 }
                 else if (role == "Staff")
                 {
-                    // Insert into Staff table
                     string insertStaff = "INSERT INTO Staff (StaffName, Phone_Number, Email, UserID) VALUES (@name, @phone, @email, @userId)";
                     using (var cmd = new SQLiteCommand(insertStaff, conn))
                     {
@@ -257,8 +266,16 @@ namespace UMS_New.Views.DashboardFiles
                 conn.Close();
             }
 
-            MessageBox.Show($"{(chkLecturer.Checked ? "Lecturer" : chkAdmin.Checked ? "Admin" : "Staff")} created successfully!");
+            MessageBox.Show($"{role} created successfully!");
             ClearInputs();
+        }
+
+        private void picPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            picPassword.Image = txtPassword.UseSystemPasswordChar
+                ? Properties.Resources.Eye
+                : Properties.Resources.Eye;
         }
     }
 }

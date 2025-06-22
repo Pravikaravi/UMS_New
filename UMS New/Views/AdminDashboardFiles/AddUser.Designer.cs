@@ -42,6 +42,8 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUsers = new System.Windows.Forms.Label();
+            this.picPassword = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // chkAdmin
@@ -192,10 +194,23 @@
             this.lblUsers.TabIndex = 48;
             this.lblUsers.Text = "Create Account for Users";
             // 
+            // picPassword
+            // 
+            this.picPassword.BackColor = System.Drawing.Color.White;
+            this.picPassword.Image = global::UMS_New.Properties.Resources.Eye;
+            this.picPassword.Location = new System.Drawing.Point(536, 339);
+            this.picPassword.Name = "picPassword";
+            this.picPassword.Size = new System.Drawing.Size(21, 19);
+            this.picPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPassword.TabIndex = 62;
+            this.picPassword.TabStop = false;
+            this.picPassword.Click += new System.EventHandler(this.picPassword_Click);
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picPassword);
             this.Controls.Add(this.chkAdmin);
             this.Controls.Add(this.chkLecturer);
             this.Controls.Add(this.chkStaff);
@@ -213,6 +228,7 @@
             this.Name = "AddUser";
             this.Size = new System.Drawing.Size(674, 676);
             this.Load += new System.EventHandler(this.AddUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +250,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUsers;
+        private System.Windows.Forms.PictureBox picPassword;
     }
 }

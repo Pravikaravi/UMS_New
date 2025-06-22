@@ -22,6 +22,12 @@ namespace UMS_New
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadCoursesIntoComboBox();
+
+            // Initial state: password hidden
+            txtPassword.UseSystemPasswordChar = true;
+            txtConfirmpassword.UseSystemPasswordChar = true;
+            picPassword.Image = Properties.Resources.Eye;
+            picConfirmPassword.Image = Properties.Resources.Eye;
         }
 
         private void LoadCoursesIntoComboBox()
@@ -64,7 +70,7 @@ namespace UMS_New
                 Color.Black
             );
 
-            Rectangle rect = new Rectangle(150, 250, 600, 385);
+            Rectangle rect = new Rectangle(150, 230, 600, 400);
             int radius = 25;
 
             DrawRectangle.DrawRoundedRectangle(
@@ -136,9 +142,9 @@ namespace UMS_New
 
                     // ✅ Check if UT Number already exists in SignupRequests
                     string checkUTQuery = @"
-                SELECT COUNT(*) FROM SignupRequests WHERE UT_Number = @UT
-                UNION ALL
-                SELECT COUNT(*) FROM Student WHERE UT_Number = @UT";
+                        SELECT COUNT(*) FROM SignupRequests WHERE UT_Number = @UT
+                        UNION ALL
+                        SELECT COUNT(*) FROM Student WHERE UT_Number = @UT";
 
                     using (SQLiteCommand checkCmd = new SQLiteCommand(checkUTQuery, conn))
                     {
@@ -217,6 +223,22 @@ namespace UMS_New
             //    // Login was cancelled or failed, show Form1 again
             //    this.Show();
             //}
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            txtConfirmpassword.UseSystemPasswordChar = !txtConfirmpassword.UseSystemPasswordChar;
+            picConfirmPassword.Image = txtConfirmpassword.UseSystemPasswordChar
+                ? Properties.Resources.Eye
+                : Properties.Resources.Eye;
+        }
+
+        private void picPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            picPassword.Image = txtPassword.UseSystemPasswordChar
+                ? Properties.Resources.Eye
+                : Properties.Resources.Eye;
         }
 
 

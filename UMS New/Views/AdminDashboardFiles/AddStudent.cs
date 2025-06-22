@@ -137,12 +137,23 @@ namespace UMS_New.Views.DashboardFiles
 
         private void AddStudent_Load(object sender, EventArgs e)
         {
-            // Optionally refresh course list here
+            // Initial state: password hidden
+            txtPassword.UseSystemPasswordChar = true;
+            picPassword.Image = Properties.Resources.Eye;
         }
 
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Optional event if needed
+        }
+
+        private void picPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            picPassword.Image = txtPassword.UseSystemPasswordChar
+                ? Properties.Resources.Eye
+                : Properties.Resources.Eye;
+
         }
     }
 }
