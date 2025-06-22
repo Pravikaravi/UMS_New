@@ -197,6 +197,20 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createTimetableTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create Attendance table
+                string createAttendanceTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Attendance (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    StudentID INTEGER NOT NULL,
+                    SubjectID INTEGER NOT NULL,
+                    Date TEXT NOT NULL,
+                    Status TEXT NOT NULL,
+                    FOREIGN KEY(StudentID) REFERENCES Student(Id),
+                    FOREIGN KEY(SubjectID) REFERENCES Subject(Id)
+                );";
+                cmd = new SQLiteCommand(createAttendanceTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";

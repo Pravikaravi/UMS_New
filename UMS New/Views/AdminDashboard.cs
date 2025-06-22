@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UMS_New.Data;
 using UMS_New.Session;
+using UMS_New.Views.AdminDashboardFiles;
 using UMS_New.Views.DashboardFiles;
 
 namespace UMS_New.Views
@@ -63,6 +64,10 @@ namespace UMS_New.Views
             TreeNode roomNode = treeAdmin.Nodes.Add("Room Management");
             roomNode.Nodes.Add("➕ Add Room (Lab or Hall)");
             roomNode.Nodes.Add("📄 View/Edit/Delete Rooms");
+
+            TreeNode attendanceNode = treeAdmin.Nodes.Add("Attendance Management");
+            attendanceNode.Nodes.Add("➕ Add Attendance");
+            
         }
 
         // New method you can call anytime to refresh the notification UI
@@ -140,6 +145,8 @@ namespace UMS_New.Views
                 rightAdmin.Controls.Add(new AddRoom() { Dock = DockStyle.Fill });
             else if (selected == "📄 View/Edit/Delete Rooms")
                 rightAdmin.Controls.Add(new RoomActions() { Dock = DockStyle.Fill });
+            else if (selected == "➕ Add Attendance")
+                rightAdmin.Controls.Add(new AddAttendance() { Dock = DockStyle.Fill });
         }
 
         private void pictureBoxBell_Click(object sender, EventArgs e)
