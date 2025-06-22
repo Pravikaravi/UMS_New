@@ -48,7 +48,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Black;
             this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(266, 410);
+            this.btnSave.Location = new System.Drawing.Point(278, 366);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(175, 39);
             this.btnSave.TabIndex = 58;
@@ -103,6 +103,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.White;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(104, 310);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(59, 19);
@@ -114,6 +115,7 @@
             this.lblUTNumber.AutoSize = true;
             this.lblUTNumber.BackColor = System.Drawing.Color.White;
             this.lblUTNumber.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUTNumber.ForeColor = System.Drawing.Color.Black;
             this.lblUTNumber.Location = new System.Drawing.Point(104, 192);
             this.lblUTNumber.Name = "lblUTNumber";
             this.lblUTNumber.Size = new System.Drawing.Size(88, 19);
@@ -125,6 +127,7 @@
             this.lblPhonenumber.AutoSize = true;
             this.lblPhonenumber.BackColor = System.Drawing.Color.White;
             this.lblPhonenumber.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhonenumber.ForeColor = System.Drawing.Color.Black;
             this.lblPhonenumber.Location = new System.Drawing.Point(104, 232);
             this.lblPhonenumber.Name = "lblPhonenumber";
             this.lblPhonenumber.Size = new System.Drawing.Size(107, 19);
@@ -136,6 +139,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.White;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(104, 272);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(52, 19);
@@ -147,6 +151,7 @@
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Black;
             this.lblName.Location = new System.Drawing.Point(104, 149);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(53, 19);
@@ -158,6 +163,7 @@
             this.lblSignup.AutoSize = true;
             this.lblSignup.BackColor = System.Drawing.Color.White;
             this.lblSignup.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignup.ForeColor = System.Drawing.Color.Black;
             this.lblSignup.Location = new System.Drawing.Point(292, 93);
             this.lblSignup.Name = "lblSignup";
             this.lblSignup.Size = new System.Drawing.Size(100, 26);

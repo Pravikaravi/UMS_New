@@ -72,5 +72,10 @@ namespace UMS_New.Views.StudentDashboardFiles
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

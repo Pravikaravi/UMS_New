@@ -24,7 +24,7 @@ namespace UMS_New.Controller
             }
         }
 
-        public DataTable GetAllTimetableEntriesWithDetails(SQLiteConnection conn)
+        public DataTable GetAllTimetableEntriesWithDetails(SQLiteConnection conn) 
         {
             string query = @"
                 SELECT 

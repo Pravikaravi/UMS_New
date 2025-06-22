@@ -30,10 +30,10 @@
         {
             this.rightStudent = new System.Windows.Forms.Panel();
             this.leftStudent = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnMarks = new System.Windows.Forms.Button();
             this.btnExams = new System.Windows.Forms.Button();
             this.btnTimetable = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
             this.rightAdmin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.headerStudent = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.leftStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             // rightStudent
             // 
+            this.rightStudent.ForeColor = System.Drawing.Color.White;
             this.rightStudent.Location = new System.Drawing.Point(247, 60);
             this.rightStudent.Name = "rightStudent";
             this.rightStudent.Size = new System.Drawing.Size(634, 601);
@@ -59,10 +61,11 @@
             // leftStudent
             // 
             this.leftStudent.BackColor = System.Drawing.Color.DimGray;
+            this.leftStudent.Controls.Add(this.btnChangePassword);
+            this.leftStudent.Controls.Add(this.btnProfile);
             this.leftStudent.Controls.Add(this.btnMarks);
             this.leftStudent.Controls.Add(this.btnExams);
             this.leftStudent.Controls.Add(this.btnTimetable);
-            this.leftStudent.Controls.Add(this.btnProfile);
             this.leftStudent.Controls.Add(this.rightAdmin);
             this.leftStudent.Controls.Add(this.label2);
             this.leftStudent.Controls.Add(this.lbl1);
@@ -75,45 +78,49 @@
             this.leftStudent.TabIndex = 5;
             this.leftStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.leftLecturer_Paint);
             // 
+            // btnProfile
+            // 
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Location = new System.Drawing.Point(33, 107);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(164, 27);
+            this.btnProfile.TabIndex = 7;
+            this.btnProfile.Text = "👩‍💻 My Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click_1);
+            // 
             // btnMarks
             // 
-            this.btnMarks.Location = new System.Drawing.Point(33, 247);
+            this.btnMarks.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarks.Location = new System.Drawing.Point(33, 245);
             this.btnMarks.Name = "btnMarks";
-            this.btnMarks.Size = new System.Drawing.Size(164, 23);
+            this.btnMarks.Size = new System.Drawing.Size(164, 26);
             this.btnMarks.TabIndex = 6;
-            this.btnMarks.Text = "📊My Marks";
+            this.btnMarks.Text = "📊 My Marks";
             this.btnMarks.UseVisualStyleBackColor = true;
             this.btnMarks.Click += new System.EventHandler(this.btnMarks_Click);
             // 
             // btnExams
             // 
-            this.btnExams.Location = new System.Drawing.Point(33, 200);
+            this.btnExams.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExams.Location = new System.Drawing.Point(33, 198);
             this.btnExams.Name = "btnExams";
-            this.btnExams.Size = new System.Drawing.Size(164, 23);
+            this.btnExams.Size = new System.Drawing.Size(164, 26);
             this.btnExams.TabIndex = 5;
-            this.btnExams.Text = "📝My Exams";
+            this.btnExams.Text = "📝 My Exams";
             this.btnExams.UseVisualStyleBackColor = true;
             this.btnExams.Click += new System.EventHandler(this.btnExams_Click);
             // 
             // btnTimetable
             // 
-            this.btnTimetable.Location = new System.Drawing.Point(33, 153);
+            this.btnTimetable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimetable.Location = new System.Drawing.Point(33, 151);
             this.btnTimetable.Name = "btnTimetable";
-            this.btnTimetable.Size = new System.Drawing.Size(164, 23);
+            this.btnTimetable.Size = new System.Drawing.Size(164, 27);
             this.btnTimetable.TabIndex = 4;
-            this.btnTimetable.Text = "📅My Timetable";
+            this.btnTimetable.Text = "📅 My Timetable";
             this.btnTimetable.UseVisualStyleBackColor = true;
             this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Location = new System.Drawing.Point(33, 108);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(164, 23);
-            this.btnProfile.TabIndex = 0;
-            this.btnProfile.Text = "🎓My Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // rightAdmin
             // 
@@ -136,11 +143,11 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.White;
             this.lbl1.Location = new System.Drawing.Point(79, 22);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(91, 22);
+            this.lbl1.Size = new System.Drawing.Size(86, 21);
             this.lbl1.TabIndex = 2;
             this.lbl1.Text = "Welcome!";
             this.lbl1.Click += new System.EventHandler(this.lblWelcome_Click);
@@ -198,6 +205,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Student Dashboard !";
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(33, 293);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(164, 27);
+            this.btnChangePassword.TabIndex = 8;
+            this.btnChangePassword.Text = "🔒 Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,9 +249,10 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel headerStudent;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnMarks;
         private System.Windows.Forms.Button btnExams;
         private System.Windows.Forms.Button btnTimetable;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }

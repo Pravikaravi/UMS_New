@@ -123,3 +123,4 @@ Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.CoreCompileInputs.cache
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.csproj.Up2Date
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.exe
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS New.pdb
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.ChangePassword.resources
