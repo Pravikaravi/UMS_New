@@ -40,6 +40,7 @@
             this.headerAdmin = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.rightLecturer = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.leftLecturer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
@@ -49,6 +50,7 @@
             // leftLecturer
             // 
             this.leftLecturer.BackColor = System.Drawing.Color.DimGray;
+            this.leftLecturer.Controls.Add(this.btnChangePassword);
             this.leftLecturer.Controls.Add(this.btnMarks);
             this.leftLecturer.Controls.Add(this.btnTimetable);
             this.leftLecturer.Controls.Add(this.rightAdmin);
@@ -65,9 +67,10 @@
             // 
             // btnMarks
             // 
-            this.btnMarks.Location = new System.Drawing.Point(43, 194);
+            this.btnMarks.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarks.Location = new System.Drawing.Point(43, 192);
             this.btnMarks.Name = "btnMarks";
-            this.btnMarks.Size = new System.Drawing.Size(148, 23);
+            this.btnMarks.Size = new System.Drawing.Size(148, 26);
             this.btnMarks.TabIndex = 5;
             this.btnMarks.Text = "📊 View Marks";
             this.btnMarks.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // 
             // btnTimetable
             // 
+            this.btnTimetable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimetable.Location = new System.Drawing.Point(43, 136);
             this.btnTimetable.Name = "btnTimetable";
-            this.btnTimetable.Size = new System.Drawing.Size(141, 23);
+            this.btnTimetable.Size = new System.Drawing.Size(141, 26);
             this.btnTimetable.TabIndex = 4;
             this.btnTimetable.Text = "🗓️ View Timetable";
             this.btnTimetable.UseVisualStyleBackColor = true;
@@ -174,6 +178,17 @@
             this.rightLecturer.TabIndex = 4;
             this.rightLecturer.Paint += new System.Windows.Forms.PaintEventHandler(this.rightLecturer_Paint);
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(43, 247);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(148, 26);
+            this.btnChangePassword.TabIndex = 6;
+            this.btnChangePassword.Text = "🔐 Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // LecturerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +225,6 @@
         private System.Windows.Forms.Button btnMarks;
         private System.Windows.Forms.Button btnTimetable;
         private System.Windows.Forms.Panel rightLecturer;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }

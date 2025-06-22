@@ -42,6 +42,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.headerStaff = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.leftStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
@@ -59,6 +60,7 @@
             // leftStaff
             // 
             this.leftStaff.BackColor = System.Drawing.Color.DimGray;
+            this.leftStaff.Controls.Add(this.btnChangePassword);
             this.leftStaff.Controls.Add(this.btnExamAction);
             this.leftStaff.Controls.Add(this.btnMarks);
             this.leftStaff.Controls.Add(this.btnAddExams);
@@ -73,44 +75,49 @@
             this.leftStaff.Name = "leftStaff";
             this.leftStaff.Size = new System.Drawing.Size(246, 660);
             this.leftStaff.TabIndex = 8;
+            this.leftStaff.Paint += new System.Windows.Forms.PaintEventHandler(this.leftStaff_Paint);
             // 
             // btnExamAction
             // 
+            this.btnExamAction.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExamAction.Location = new System.Drawing.Point(33, 213);
             this.btnExamAction.Name = "btnExamAction";
-            this.btnExamAction.Size = new System.Drawing.Size(164, 23);
+            this.btnExamAction.Size = new System.Drawing.Size(164, 27);
             this.btnExamAction.TabIndex = 7;
-            this.btnExamAction.Text = "📝Delete/Edit Exams";
+            this.btnExamAction.Text = "📝 Delete/Edit Exams";
             this.btnExamAction.UseVisualStyleBackColor = true;
             this.btnExamAction.Click += new System.EventHandler(this.btnExamAction_Click);
             // 
             // btnMarks
             // 
+            this.btnMarks.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarks.Location = new System.Drawing.Point(33, 267);
             this.btnMarks.Name = "btnMarks";
-            this.btnMarks.Size = new System.Drawing.Size(164, 23);
+            this.btnMarks.Size = new System.Drawing.Size(164, 26);
             this.btnMarks.TabIndex = 6;
-            this.btnMarks.Text = "📊Add/Edit Marks";
+            this.btnMarks.Text = "📊 Add/Edit Marks";
             this.btnMarks.UseVisualStyleBackColor = true;
             this.btnMarks.Click += new System.EventHandler(this.btnMarks_Click);
             // 
             // btnAddExams
             // 
+            this.btnAddExams.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddExams.Location = new System.Drawing.Point(33, 160);
             this.btnAddExams.Name = "btnAddExams";
-            this.btnAddExams.Size = new System.Drawing.Size(164, 23);
+            this.btnAddExams.Size = new System.Drawing.Size(164, 25);
             this.btnAddExams.TabIndex = 5;
-            this.btnAddExams.Text = "📝Add Exams ";
+            this.btnAddExams.Text = "📝 Add Exams ";
             this.btnAddExams.UseVisualStyleBackColor = true;
             this.btnAddExams.Click += new System.EventHandler(this.btnAddExams_Click);
             // 
             // btnTimetable
             // 
+            this.btnTimetable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimetable.Location = new System.Drawing.Point(33, 113);
             this.btnTimetable.Name = "btnTimetable";
-            this.btnTimetable.Size = new System.Drawing.Size(164, 23);
+            this.btnTimetable.Size = new System.Drawing.Size(164, 25);
             this.btnTimetable.TabIndex = 4;
-            this.btnTimetable.Text = "📅View Timetable";
+            this.btnTimetable.Text = "📅 View Timetable";
             this.btnTimetable.UseVisualStyleBackColor = true;
             this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
             // 
@@ -196,6 +203,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Staff Dashboard !";
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(33, 321);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(164, 26);
+            this.btnChangePassword.TabIndex = 8;
+            this.btnChangePassword.Text = "🔐 Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // StaffDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,5 +252,6 @@
         private System.Windows.Forms.Panel headerStaff;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExamAction;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }

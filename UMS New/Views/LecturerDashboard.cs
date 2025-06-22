@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UMS_New.Session;
 using UMS_New.Views.LecturerDashboardFiles;
+using UMS_New.Views.StudentDashboardFiles;
 
 namespace UMS_New.Views
 {
@@ -72,6 +73,14 @@ namespace UMS_New.Views
         private void lblWelcome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            rightLecturer.Controls.Clear(); // Clear existing controls
+            ChangePassword changepassword = new ChangePassword(); // Create the control
+            changepassword.Dock = DockStyle.Fill; // Fill the panel
+            rightLecturer.Controls.Add(changepassword); // Add to the panel
         }
     }
 }
