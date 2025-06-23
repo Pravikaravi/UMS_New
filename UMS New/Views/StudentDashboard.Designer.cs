@@ -30,6 +30,7 @@
         {
             this.rightStudent = new System.Windows.Forms.Panel();
             this.leftStudent = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnMarks = new System.Windows.Forms.Button();
             this.btnExams = new System.Windows.Forms.Button();
@@ -42,7 +43,8 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.headerStudent = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.btnSendFeedback = new System.Windows.Forms.Button();
+            this.btnLeaveRequest = new System.Windows.Forms.Button();
             this.leftStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
@@ -61,6 +63,8 @@
             // leftStudent
             // 
             this.leftStudent.BackColor = System.Drawing.Color.DimGray;
+            this.leftStudent.Controls.Add(this.btnLeaveRequest);
+            this.leftStudent.Controls.Add(this.btnSendFeedback);
             this.leftStudent.Controls.Add(this.btnChangePassword);
             this.leftStudent.Controls.Add(this.btnProfile);
             this.leftStudent.Controls.Add(this.btnMarks);
@@ -77,6 +81,17 @@
             this.leftStudent.Size = new System.Drawing.Size(246, 660);
             this.leftStudent.TabIndex = 5;
             this.leftStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.leftLecturer_Paint);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(33, 397);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(164, 27);
+            this.btnChangePassword.TabIndex = 8;
+            this.btnChangePassword.Text = "🔒 Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnProfile
             // 
@@ -205,16 +220,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Student Dashboard !";
             // 
-            // btnChangePassword
+            // btnSendFeedback
             // 
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.Location = new System.Drawing.Point(33, 293);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(164, 27);
-            this.btnChangePassword.TabIndex = 8;
-            this.btnChangePassword.Text = "🔒 Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            this.btnSendFeedback.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFeedback.Location = new System.Drawing.Point(33, 296);
+            this.btnSendFeedback.Name = "btnSendFeedback";
+            this.btnSendFeedback.Size = new System.Drawing.Size(164, 26);
+            this.btnSendFeedback.TabIndex = 9;
+            this.btnSendFeedback.Text = "Send Feedback";
+            this.btnSendFeedback.UseVisualStyleBackColor = true;
+            this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
+            // 
+            // btnLeaveRequest
+            // 
+            this.btnLeaveRequest.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLeaveRequest.Location = new System.Drawing.Point(33, 346);
+            this.btnLeaveRequest.Name = "btnLeaveRequest";
+            this.btnLeaveRequest.Size = new System.Drawing.Size(164, 26);
+            this.btnLeaveRequest.TabIndex = 10;
+            this.btnLeaveRequest.Text = "Leave Request";
+            this.btnLeaveRequest.UseVisualStyleBackColor = true;
+            this.btnLeaveRequest.Click += new System.EventHandler(this.btnLeaveRequest_Click);
             // 
             // StudentDashboard
             // 
@@ -254,5 +280,7 @@
         private System.Windows.Forms.Button btnTimetable;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Button btnLeaveRequest;
+        private System.Windows.Forms.Button btnSendFeedback;
     }
 }

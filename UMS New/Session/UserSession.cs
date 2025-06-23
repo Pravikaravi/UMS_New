@@ -12,5 +12,8 @@ namespace UMS_New.Session
 
         public static string Username { get; set; }
         public static string Role { get; set; }
+
+        public static string StudentName { get; set; }
+        public static string UTNumber { get; set; }
     }
 }

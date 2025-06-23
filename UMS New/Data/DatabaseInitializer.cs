@@ -227,6 +227,34 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createStudyMaterialsTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create Feedback table
+                string createFeedbackTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Feedback  (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    StudentName TEXT NOT NULL,
+                    UT_Number TEXT NOT NULL,
+                    SubjectID INTEGER NOT NULL,
+                    Feedback_Type TEXT NOT NULL,
+                    Feedback TEXT NOT NULL,
+                    FOREIGN KEY (SubjectID) REFERENCES Subject(Id)
+                );";
+                cmd = new SQLiteCommand(createFeedbackTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
+                //Create Leave Requests table
+                string createLeaveRequestsTableQuery = @"
+                CREATE TABLE IF NOT EXISTS LeaveRequests  (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    UserID INT NOT NULL,
+                    UT_Number TEXT  NOT NULL,
+                    Start_Date TEXT NOT NULL,
+                    End_Date TEXT NOT NULL,
+                    Reason TEXT NOT NULL,
+                    FOREIGN KEY (UserID) REFERENCES User(Id)
+                );";
+                cmd = new SQLiteCommand(createLeaveRequestsTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";

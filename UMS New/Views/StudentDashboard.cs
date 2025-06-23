@@ -46,45 +46,45 @@ namespace UMS_New.Views
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            myProfile myprofileControl = new myProfile(); // Create the control
-            myprofileControl.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(myprofileControl); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            myProfile myprofileControl = new myProfile(); 
+            myprofileControl.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(myprofileControl); 
         }
 
         private void btnTimetable_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            myTimetable mytimetableControl = new myTimetable(); // Create the control
-            mytimetableControl.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(mytimetableControl); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            myTimetable mytimetableControl = new myTimetable(); 
+            mytimetableControl.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(mytimetableControl); 
 
         }
 
         private void btnExams_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            myExams myexamsControl = new myExams(); // Create the control
-            myexamsControl.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(myexamsControl); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            myExams myexamsControl = new myExams(); 
+            myexamsControl.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(myexamsControl); 
 
         }
 
         private void btnMarks_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            myMarks mymarksControl = new myMarks(); // Create the control
-            mymarksControl.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(mymarksControl); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            myMarks mymarksControl = new myMarks(); 
+            mymarksControl.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(mymarksControl); 
 
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            myAttendance myattendanceControl = new myAttendance(); // Create the control
-            myattendanceControl.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(myattendanceControl); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            myAttendance myattendanceControl = new myAttendance();
+            myattendanceControl.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(myattendanceControl); 
 
         }
 
@@ -94,11 +94,11 @@ namespace UMS_New.Views
             UserSession.Username = null;
             UserSession.Role = null;
 
-            // Show the login form
+            
             LoginForm login = new LoginForm();
             login.Show();
 
-            // Close or hide the current dashboard (assuming this is inside the dashboard form)
+            
             this.Close();
         }
 
@@ -122,10 +122,26 @@ namespace UMS_New.Views
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            rightStudent.Controls.Clear(); // Clear existing controls
-            ChangePassword changepassword = new ChangePassword(); // Create the control
-            changepassword.Dock = DockStyle.Fill; // Fill the panel
-            rightStudent.Controls.Add(changepassword); // Add to the panel
+            rightStudent.Controls.Clear(); 
+            ChangePassword changepassword = new ChangePassword(); 
+            changepassword.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(changepassword); 
+        }
+
+        private void btnSendFeedback_Click(object sender, EventArgs e)
+        {
+            rightStudent.Controls.Clear(); 
+            SendFeedback sendfeedback = new SendFeedback();
+            sendfeedback.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(sendfeedback); 
+        }
+
+        private void btnLeaveRequest_Click(object sender, EventArgs e)
+        {
+            rightStudent.Controls.Clear();
+            LeaveRequest leaverequest = new LeaveRequest();
+            leaverequest.Dock = DockStyle.Fill; 
+            rightStudent.Controls.Add(leaverequest); 
         }
     }
 }
