@@ -9,7 +9,7 @@ namespace UMS_New.Model
     internal class LeaveRequest
     {
         public int Id { get; set; }
-        public string StudentName { get; set; }
+        public int UserID { get; set; }
         public string UT_Number { get; set; }
         public string Start_Date { get; set; }
 
