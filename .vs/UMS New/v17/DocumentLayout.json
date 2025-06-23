@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "Z:\\C#\\Last\\UMS_New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\views\\admindashboardfiles\\addattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\admindashboardfiles\\addattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\views\\admindashboardfiles\\addattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\views\\admindashboardfiles\\addattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|Z:\\C#\\Last\\UMS_New\\ums new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|z:\\c#\\last\\ums_new\\ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{80794507-7946-4775-9486-C4FFE2752AFD}|UMS New\\UMS New.csproj|solutionrelative:ums new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AddAttendance.cs",
-              "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "RelativeDocumentMoniker": "UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "RelativeToolTip": "UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAmwK4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:12:27.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddAttendance.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "RelativeDocumentMoniker": "UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs",
-              "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs [Design]",
-              "RelativeToolTip": "UMS New\\Views\\AdminDashboardFiles\\AddAttendance.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:12:26.599Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs",
-              "RelativeDocumentMoniker": "UMS New\\Form1.cs",
-              "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Form1.cs [Design]",
-              "RelativeToolTip": "UMS New\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:44:10.424Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "Z:\\C#\\Last\\UMS_New\\UMS New\\Program.cs",
               "RelativeDocumentMoniker": "UMS New\\Program.cs",
               "ToolTip": "Z:\\C#\\Last\\UMS_New\\UMS New\\Program.cs",
               "RelativeToolTip": "UMS New\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T07:01:12.056Z",
+              "WhenOpened": "2025-06-23T06:04:16.815Z",
               "EditorCaption": ""
             }
           ]

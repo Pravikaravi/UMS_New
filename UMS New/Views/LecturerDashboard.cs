@@ -82,5 +82,13 @@ namespace UMS_New.Views
             changepassword.Dock = DockStyle.Fill; // Fill the panel
             rightLecturer.Controls.Add(changepassword); // Add to the panel
         }
+
+        private void btnAddStudyMaterials_Click(object sender, EventArgs e)
+        {
+            rightLecturer.Controls.Clear(); // Clear existing controls
+            AddStudyMaterials addstudymaterials = new AddStudyMaterials(); // Create the control
+            addstudymaterials.Dock = DockStyle.Fill; // Fill the panel
+            rightLecturer.Controls.Add(addstudymaterials); // Add to the panel
+        }
     }
 }

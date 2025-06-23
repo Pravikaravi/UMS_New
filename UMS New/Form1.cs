@@ -15,6 +15,8 @@ namespace UMS_New
         public Form1()
         {
             InitializeComponent();
+            
+
             this.Paint += new PaintEventHandler(formMain_Paint);
             this.Load += new EventHandler(Form1_Load);
         }

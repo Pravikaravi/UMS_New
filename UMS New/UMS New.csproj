@@ -64,6 +64,7 @@
     <Compile Include="Controller\signuprequestController.cs" />
     <Compile Include="Controller\staffController.cs" />
     <Compile Include="Controller\studentController.cs" />
+    <Compile Include="Controller\StudyMaterialController.cs" />
     <Compile Include="Controller\subjectController.cs" />
     <Compile Include="Controller\timetableController.cs" />
     <Compile Include="Controller\userController.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Model\SignupRequest.cs" />
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\StudyMaterial.cs" />
     <Compile Include="Model\Subject.cs" />
     <Compile Include="Model\Timetable.cs" />
     <Compile Include="Model\User.cs" />
@@ -208,6 +210,12 @@
     </Compile>
     <Compile Include="Views\LecturerDashboard.Designer.cs">
       <DependentUpon>LecturerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\AddStudyMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerDashboardFiles\AddStudyMaterials.Designer.cs">
+      <DependentUpon>AddStudyMaterials.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LecturerDashboardFiles\viewMarks.cs">
       <SubType>UserControl</SubType>
@@ -344,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LecturerDashboard.resx">
       <DependentUpon>LecturerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerDashboardFiles\AddStudyMaterials.resx">
+      <DependentUpon>AddStudyMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LecturerDashboardFiles\viewMarks.resx">
       <DependentUpon>viewMarks.cs</DependentUpon>

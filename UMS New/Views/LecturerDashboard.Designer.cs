@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.leftLecturer = new System.Windows.Forms.Panel();
+            this.btnAddStudyMaterials = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnMarks = new System.Windows.Forms.Button();
             this.btnTimetable = new System.Windows.Forms.Button();
             this.rightAdmin = new System.Windows.Forms.Panel();
@@ -40,7 +42,6 @@
             this.headerAdmin = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.rightLecturer = new System.Windows.Forms.Panel();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.leftLecturer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
@@ -50,6 +51,7 @@
             // leftLecturer
             // 
             this.leftLecturer.BackColor = System.Drawing.Color.DimGray;
+            this.leftLecturer.Controls.Add(this.btnAddStudyMaterials);
             this.leftLecturer.Controls.Add(this.btnChangePassword);
             this.leftLecturer.Controls.Add(this.btnMarks);
             this.leftLecturer.Controls.Add(this.btnTimetable);
@@ -64,6 +66,28 @@
             this.leftLecturer.Size = new System.Drawing.Size(246, 660);
             this.leftLecturer.TabIndex = 1;
             this.leftLecturer.Paint += new System.Windows.Forms.PaintEventHandler(this.leftAdmin_Paint);
+            // 
+            // btnAddStudyMaterials
+            // 
+            this.btnAddStudyMaterials.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudyMaterials.Location = new System.Drawing.Point(43, 247);
+            this.btnAddStudyMaterials.Name = "btnAddStudyMaterials";
+            this.btnAddStudyMaterials.Size = new System.Drawing.Size(148, 26);
+            this.btnAddStudyMaterials.TabIndex = 7;
+            this.btnAddStudyMaterials.Text = "🔐 Add Notes";
+            this.btnAddStudyMaterials.UseVisualStyleBackColor = true;
+            this.btnAddStudyMaterials.Click += new System.EventHandler(this.btnAddStudyMaterials_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(43, 304);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(148, 26);
+            this.btnChangePassword.TabIndex = 6;
+            this.btnChangePassword.Text = "🔐 Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnMarks
             // 
@@ -178,17 +202,6 @@
             this.rightLecturer.TabIndex = 4;
             this.rightLecturer.Paint += new System.Windows.Forms.PaintEventHandler(this.rightLecturer_Paint);
             // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.Location = new System.Drawing.Point(43, 247);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(148, 26);
-            this.btnChangePassword.TabIndex = 6;
-            this.btnChangePassword.Text = "🔐 Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
             // LecturerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +239,6 @@
         private System.Windows.Forms.Button btnTimetable;
         private System.Windows.Forms.Panel rightLecturer;
         private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Button btnAddStudyMaterials;
     }
 }

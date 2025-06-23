@@ -167,10 +167,10 @@ namespace UMS_New.Views.AdminDashboardFiles
                     MessageBox.Show("Please select a valid course.");
                 }
             }
-            else
-            {
-                MessageBox.Show("Please select a valid subject.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Please select a valid subject.");
+            //}
         }
 
         private void LoadAttendanceForDate(string date)

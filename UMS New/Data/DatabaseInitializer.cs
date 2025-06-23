@@ -211,6 +211,22 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createAttendanceTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create Study Materials table
+                string createStudyMaterialsTableQuery = @"
+                CREATE TABLE IF NOT EXISTS StudyMaterials  (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Title TEXT NOT NULL,
+                    Description TEXT,
+                    FilePath TEXT NOT NULL,
+                    UploadDate TEXT NOT NULL,
+                    SubjectID INTEGER NOT NULL,
+                    LecturerID INTEGER NOT NULL,
+                    FOREIGN KEY (SubjectID) REFERENCES Subject(Id),
+                    FOREIGN KEY (LecturerID) REFERENCES Lecturer(Id)
+                );";
+                cmd = new SQLiteCommand(createStudyMaterialsTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";
