@@ -78,12 +78,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\AcceptLeave.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Assignment.cs" />
     <Compile Include="Model\Attendance.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Exam.cs" />
-    <Compile Include="Model\FeedbackForm.cs" />
     <Compile Include="Model\LeaveRequest.cs" />
     <Compile Include="Model\Lecturer.cs" />
     <Compile Include="Model\Lecturer_Subject.cs" />
@@ -171,6 +171,12 @@
     </Compile>
     <Compile Include="Views\AdminDashboardFiles\ExamActions.Designer.cs">
       <DependentUpon>ExamActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminDashboardFiles\ManageLeaveRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminDashboardFiles\ManageLeaveRequest.Designer.cs">
+      <DependentUpon>ManageLeaveRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminDashboardFiles\ManageRequestActions.cs">
       <SubType>UserControl</SubType>
@@ -292,11 +298,11 @@
     <Compile Include="Views\StudentDashboardFiles\myTimetable.Designer.cs">
       <DependentUpon>myTimetable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StudentDashboardFiles\SendFeedback.cs">
+    <Compile Include="Views\StudentDashboardFiles\ViewStudyMaterials.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\StudentDashboardFiles\SendFeedback.Designer.cs">
-      <DependentUpon>SendFeedback.cs</DependentUpon>
+    <Compile Include="Views\StudentDashboardFiles\ViewStudyMaterials.Designer.cs">
+      <DependentUpon>ViewStudyMaterials.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminDashboardFiles\ExamActions.resx">
       <DependentUpon>ExamActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminDashboardFiles\ManageLeaveRequest.resx">
+      <DependentUpon>ManageLeaveRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminDashboardFiles\ManageRequestActions.resx">
       <DependentUpon>ManageRequestActions.cs</DependentUpon>
@@ -407,8 +416,8 @@
     <EmbeddedResource Include="Views\StudentDashboardFiles\myTimetable.resx">
       <DependentUpon>myTimetable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\StudentDashboardFiles\SendFeedback.resx">
-      <DependentUpon>SendFeedback.cs</DependentUpon>
+    <EmbeddedResource Include="Views\StudentDashboardFiles\ViewStudyMaterials.resx">
+      <DependentUpon>ViewStudyMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace UMS_New.Model
 {
-    internal class FeedbackForm
+    internal class AcceptLeave
     {
         public int Id { get; set; }
-        public string StudentID { get; set; }
+       
+        //public int UserID { get; set; }
         public string UT_Number { get; set; }
-        public string SubjectID { get; set; }
-        public string Feedback_Type { get; set; }
+        public string Start_Date { get; set; }
 
-        public string Feedback { get; set; }
+        public string End_Date { get; set; }
+
+        public string Reason { get; set; }
     }
 }
+

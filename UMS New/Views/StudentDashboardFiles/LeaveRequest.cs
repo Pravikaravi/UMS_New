@@ -82,7 +82,7 @@ namespace UMS_New.Views.StudentDashboardFiles
                         // Parameters for the query
                         cmd.Parameters.AddWithValue("@UserID", UserSession.UserID); 
                         cmd.Parameters.AddWithValue("@UTNumber", txtUT_Number.Text);
-                        cmd.Parameters.AddWithValue("@StartDate", dtpFirst.Text); 
+                        cmd.Parameters.AddWithValue("@StartDate", dtpFirst.Text);   
                         cmd.Parameters.AddWithValue("@EndDate", dtpLastday.Text); 
                         cmd.Parameters.AddWithValue("@Reason", txtReason.Text);
 

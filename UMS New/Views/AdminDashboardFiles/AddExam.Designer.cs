@@ -80,7 +80,7 @@
             // 
             // txtExamName
             // 
-            this.txtExamName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExamName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExamName.Location = new System.Drawing.Point(262, 161);
             this.txtExamName.Name = "txtExamName";
             this.txtExamName.Size = new System.Drawing.Size(319, 25);

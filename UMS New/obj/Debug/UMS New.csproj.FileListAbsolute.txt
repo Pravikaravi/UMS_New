@@ -127,4 +127,5 @@ Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.ChangeP
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.AdminDashboardFiles.AddAttendance.resources
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.LecturerDashboardFiles.AddStudyMaterials.resources
 Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.LeaveRequest.resources
-Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.SendFeedback.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.StudentDashboardFiles.ViewStudyMaterials.resources
+Z:\C#\Last\UMS_New\UMS New\obj\Debug\UMS_New.Views.DashboardFiles.ManageLeaveRequest.resources

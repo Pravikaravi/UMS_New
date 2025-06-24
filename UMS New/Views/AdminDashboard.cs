@@ -37,6 +37,7 @@ namespace UMS_New.Views
             studentNode.Nodes.Add("➕ Add Student");
             studentNode.Nodes.Add("📄 View/Edit/Delete Students");
             studentNode.Nodes.Add("📄 Manage requests");
+            studentNode.Nodes.Add("📄 Manage Leave applications");
 
             TreeNode userNode = treeAdmin.Nodes.Add("User Management");
             userNode.Nodes.Add("➕ Add User");
@@ -147,7 +148,11 @@ namespace UMS_New.Views
                 rightAdmin.Controls.Add(new RoomActions() { Dock = DockStyle.Fill });
             else if (selected == "➕ Add Attendance")
                 rightAdmin.Controls.Add(new AddAttendance() { Dock = DockStyle.Fill });
+            else if (selected == "📄 Manage Leave applications")
+                rightAdmin.Controls.Add(new ManageLeaveRequest() { Dock = DockStyle.Fill });
         }
+
+        
 
         private void pictureBoxBell_Click(object sender, EventArgs e)
         {
@@ -217,5 +222,10 @@ namespace UMS_New.Views
         private void pictureBox2_Click(object sender, EventArgs e) { }
 
         private void lblNotification_Click(object sender, EventArgs e) { }
+
+        private void leftAdmin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -255,6 +255,19 @@ namespace UMS_New.Data
                 cmd = new SQLiteCommand(createLeaveRequestsTableQuery, conn);
                 cmd.ExecuteNonQuery();
 
+                //Create Accepts Leave  table
+                string acceptLeaveTableQuery = @"
+                CREATE TABLE IF NOT EXISTS AcceptLeave  (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    UT_Number TEXT NOT NULL,
+                    Start_Date TEXT NOT NULL,
+                    End_Date TEXT NOT NULL,
+                    Reason TEXT NOT NULL
+                );"; 
+                cmd = new SQLiteCommand(acceptLeaveTableQuery, conn);
+                cmd.ExecuteNonQuery();
+
+
 
                 // 🆕 Check if Admin exists
                 string checkAdminQuery = "SELECT COUNT(*) FROM Users WHERE Role = 'Admin'";

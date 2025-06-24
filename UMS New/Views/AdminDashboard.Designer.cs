@@ -60,6 +60,7 @@
             this.leftAdmin.Name = "leftAdmin";
             this.leftAdmin.Size = new System.Drawing.Size(246, 660);
             this.leftAdmin.TabIndex = 0;
+            this.leftAdmin.Paint += new System.Windows.Forms.PaintEventHandler(this.leftAdmin_Paint);
             // 
             // label2
             // 

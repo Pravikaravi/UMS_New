@@ -86,7 +86,7 @@ namespace UMS_New.Views.DashboardFiles
             {
                
 
-                // ✅ Check if UT Number already exists
+                // Check if UT Number already exists
                 if (studentController.IsUTNumberExists(txtUT_Number.Text, conn))
                 {
                     MessageBox.Show("UT Number already exists! Please enter a unique UT Number.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -144,7 +144,7 @@ namespace UMS_New.Views.DashboardFiles
 
         private void cmbCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Optional event if needed
+            
         }
 
         private void picPassword_Click(object sender, EventArgs e)

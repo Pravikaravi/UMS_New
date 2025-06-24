@@ -128,14 +128,7 @@ namespace UMS_New.Views
             rightStudent.Controls.Add(changepassword); 
         }
 
-        private void btnSendFeedback_Click(object sender, EventArgs e)
-        {
-            rightStudent.Controls.Clear(); 
-            SendFeedback sendfeedback = new SendFeedback();
-            sendfeedback.Dock = DockStyle.Fill; 
-            rightStudent.Controls.Add(sendfeedback); 
-        }
-
+        
         private void btnLeaveRequest_Click(object sender, EventArgs e)
         {
             rightStudent.Controls.Clear();
@@ -143,5 +136,13 @@ namespace UMS_New.Views
             leaverequest.Dock = DockStyle.Fill; 
             rightStudent.Controls.Add(leaverequest); 
         }
+
+        //private void btnStudyMaterials_Click(object sender, EventArgs e)
+        //{
+        //    rightStudent.Controls.Clear();
+        //    ViewStudyMaterials viewstudymaterials = new ViewStudyMaterials();
+        //    viewstudymaterials.Dock = DockStyle.Fill;
+        //    rightStudent.Controls.Add(viewstudymaterials);
+        //}
     }
 }

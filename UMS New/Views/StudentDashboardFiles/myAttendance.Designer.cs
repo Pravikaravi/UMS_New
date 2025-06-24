@@ -34,8 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "myAttendance";
             this.Size = new System.Drawing.Size(756, 544);
+            this.Load += new System.EventHandler(this.myAttendance_Load);
             this.ResumeLayout(false);
 
         }

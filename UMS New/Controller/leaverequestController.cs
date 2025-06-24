@@ -6,7 +6,7 @@ using UMS_New.Session;
 
 namespace UMS_New.Controller
 {
-    internal class LeaveRequestController
+    internal class leaverequestController
     {
         private string connectionString = "Data Source=UMS_New.db;Version=3;";
 

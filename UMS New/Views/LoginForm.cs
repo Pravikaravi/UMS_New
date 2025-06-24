@@ -51,6 +51,7 @@ namespace UMS_New.Views
                     // Store session data here
                     UserSession.Username = username;
                     UserSession.Role = role;
+                   // UserSession.Username = ID;
 
                     Form dashboard = null;
 

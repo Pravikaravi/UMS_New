@@ -16,5 +16,10 @@ namespace UMS_New.Views.StudentDashboardFiles
         {
             InitializeComponent();
         }
+
+        private void myAttendance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
