@@ -18,7 +18,8 @@ namespace UMS_New.Views
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // You can add any initial load logic here
+            txtPassword.UseSystemPasswordChar = true;
+            picEye.Image = Properties.Resources.Eye;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -73,9 +74,9 @@ namespace UMS_New.Views
                         return;
                     }
 
-                    // ✅ Hide login, show dashboard, and close login after dashboard closes
+                    // Hide login, show dashboard, and close login after dashboard closes
                     this.Hide();
-                    dashboard.FormClosed += (s, args) => this.Close(); // Login closes *after* dashboard
+                    dashboard.FormClosed += (s, args) => this.Close(); 
                     dashboard.Show();
                 }
             }
@@ -85,6 +86,14 @@ namespace UMS_New.Views
         {
             Form1 signupForm = new Form1();
             signupForm.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            picEye.Image = txtPassword.UseSystemPasswordChar
+                ? Properties.Resources.Eye
+                : Properties.Resources.Eye;
         }
     }
 }

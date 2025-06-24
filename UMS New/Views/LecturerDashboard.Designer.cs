@@ -74,7 +74,7 @@
             this.btnAddStudyMaterials.Name = "btnAddStudyMaterials";
             this.btnAddStudyMaterials.Size = new System.Drawing.Size(148, 26);
             this.btnAddStudyMaterials.TabIndex = 7;
-            this.btnAddStudyMaterials.Text = "🔐 Add Notes";
+            this.btnAddStudyMaterials.Text = "Add Notes";
             this.btnAddStudyMaterials.UseVisualStyleBackColor = true;
             this.btnAddStudyMaterials.Click += new System.EventHandler(this.btnAddStudyMaterials_Click);
             // 
